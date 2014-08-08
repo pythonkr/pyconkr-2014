@@ -9,4 +9,4 @@
 media/
 collected_static/
 django-summernote/
-bower_components/
+**/static/components/**
