@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-speaker list
+<ul>
+  {% for speaker in object_list %}
+  <li><a href="{{ speaker.get_absolute_url }}">{{ speaker }}</a></li>
+  {% endfor %}
+</ul>
 {% endblock %}

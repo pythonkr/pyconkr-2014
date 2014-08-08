@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-program list
+<ul>
+  {% for program in object_list %}
+  <li><a href="{{ program.get_absolute_url }}">{{ program }}</a></li>
+  {% endfor %}
+</ul>
 {% endblock %}

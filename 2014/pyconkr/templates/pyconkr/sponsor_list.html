@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-sponsor list
+<ul>
+  {% for sponsor in object_list %}
+  <li><a href="{{ sponsor.get_absolute_url }}">{{ sponsor }}</a></li>
+  {% endfor %}
+</ul>
 {% endblock %}
