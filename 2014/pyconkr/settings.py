@@ -43,6 +43,7 @@ INSTALLED_APPS = (
 ) + (
     # thirt-party apps
     'django_summernote',
+    'south',
 ) + (
     # local apps
     'pyconkr',
