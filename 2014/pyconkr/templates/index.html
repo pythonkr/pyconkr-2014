@@ -1,4 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-content
+<h1>Pycon Korea 2014</h1>
+<p>blah blah</p>
+<hr>
+<h2>Announcements</h2>
+<ul>
+{% for announcement in recent_announcements %}
+<li><a href="{% url "announcement" announcement.id %}">{{ announcement }}</a></li>
+{% endfor %}
+</ul>
 {% endblock %}

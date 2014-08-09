@@ -2,8 +2,8 @@
 
 {% block content %}
 <ul>
-  {% for speaker in object_list %}
-  <li><a href="{{ speaker.get_absolute_url }}">{{ speaker }}</a></li>
+  {% for obj in object_list %}
+  <li><a href="{{ obj.get_absolute_url }}">{{ obj }}</a></li>
   {% endfor %}
 </ul>
 {% endblock %}

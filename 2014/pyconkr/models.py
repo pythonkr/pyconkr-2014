@@ -31,9 +31,17 @@ class ProgramTime(models.Model):
         return '%s - %s' % (self.begin, self.end)
 
 
+class ProgramCategory(models.Model):
+    name = models.CharField(max_length=100, db_index=True)
+
+    def __unicode__(self):
+        return self.name
+
+
 class SponsorLevel(models.Model):
     name = models.CharField(max_length=100, db_index=True)
     desc = models.TextField(null=True, blank=True)
+    order = models.IntegerField(default=1)
 
     def __unicode__(self):
         return self.name
@@ -77,6 +85,7 @@ class Program(models.Model):
     room = models.ForeignKey(Room)
     date = models.ForeignKey(ProgramDate)
     times = models.ManyToManyField(ProgramTime)
+    category = models.ForeignKey(ProgramCategory, null=True)
 
     def get_absolute_url(self):
         return reverse('program', args=[self.id])
@@ -102,3 +111,13 @@ class Announcement(models.Model):
 
     def __unicode__(self):
         return self.title
+
+
+class Jobfair(models.Model):
+    name = models.CharField(max_length=100, db_index=True)
+    location = models.CharField(max_length=255, null=True, blank=True)
+    sponsor = models.ForeignKey(Sponsor, null=True)
+    desc = models.TextField(null=True, blank=True)
+
+    def __unicode__(self):
+        return self.name

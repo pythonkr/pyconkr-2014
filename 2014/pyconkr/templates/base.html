@@ -7,13 +7,21 @@
   <script src="{% static "components/jquery/dist/jquery.min.js" %}"></script>
   <script src="{% static "components/bootstrap/dist/js/bootstrap.min.js" %}"></script>
   <link href="{% static "components/bootstrap/dist/css/bootstrap.min.css" %}" rel="stylesheet">
+  <link href="{% static "css/pyconkr.css" %}" rel="stylesheet">
   {% block head %}{% endblock %}
 </head>
 
 <body>
 {% include "nav.html" %}
-<div class="container">
-{% block content %}{% endblock %}
+<div class="container content">
+    <div class="row">
+        <div class="col-md-8">
+            {% block content %}{% endblock %}
+        </div>
+        <div class="col-md-4">
+            {% include "sponsors.html" %}
+        </div>
+    </div>
 </div>
 {% include "footer.html" %}
 </body>
