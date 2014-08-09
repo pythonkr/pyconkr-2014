@@ -3,9 +3,13 @@
 
 {% block content %}
 <h1>{% trans "Program list" %}</h1>
+
+{% for obj in object_list %}
+<h2>{{ obj.name }}</h2>
 <ul>
-  {% for obj in object_list %}
-  <li><a href="{{ obj.get_absolute_url }}">{{ obj }}</a></li>
+  {% for program in obj.program_set.all %}
+  <li><a href="{{ program.get_absolute_url }}">{{ program.name }}</a></li>
   {% endfor %}
 </ul>
+{% endfor %}
 {% endblock %}

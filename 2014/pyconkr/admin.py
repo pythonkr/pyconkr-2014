@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.flatpages.models import FlatPage
 from django_summernote.admin import SummernoteModelAdmin
-from .models import (Room, Program, ProgramTime, ProgramDate,
+from .models import (Room, Program, ProgramTime, ProgramDate, ProgramCategory,
                      Speaker, Sponsor, SponsorLevel,
                      Announcement, Jobfair)
 
@@ -23,6 +23,12 @@ class ProgramTimeAdmin(admin.ModelAdmin):
     list_editable = ('name',)
     ordering = ('begin',)
 admin.site.register(ProgramTime, ProgramTimeAdmin)
+
+
+class ProgramCategoryAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name',)
+    list_editable = ('name',)
+admin.site.register(ProgramCategory, ProgramCategoryAdmin)
 
 
 class SponsorAdmin(SummernoteModelAdmin):
@@ -49,7 +55,8 @@ admin.site.register(Speaker, SpeakerAdmin)
 
 
 class ProgramAdmin(SummernoteModelAdmin):
-    list_display = ('id', 'name', 'date', 'room')
+    list_display = ('id', 'name', 'date', 'room', 'category',)
+    list_editable = ('name', 'category',)
     ordering = ('id',)
     filter_horizontal = ('times', )
     search_fields = ('name', 'speakers__name', 'desc',)

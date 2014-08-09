@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from .models import (Room, Program, ProgramDate,
+from .models import (Room, Program, ProgramCategory,
                      Speaker, Sponsor, Jobfair, Announcement)
 
 
@@ -35,12 +35,8 @@ class SpeakerDetail(DetailView):
 
 
 class ProgramList(ListView):
-    model = Program
-
-    def get_context_data(self, **kwargs):
-        context = super(ProgramList, self).get_context_data(**kwargs)
-        context['dates'] = ProgramDate.objects.all()
-        return context
+    model = ProgramCategory
+    template_name = "pyconkr/program_list.html"
 
 
 class ProgramDetail(DetailView):
