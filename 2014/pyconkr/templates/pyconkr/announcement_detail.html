@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-{{ object }}
+<h1>{{ object.title }}</h1>
+{{ object.desc|safe }}
 {% endblock %}

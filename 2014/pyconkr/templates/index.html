@@ -1,8 +1,14 @@
 {% extends "base.html" %}
-{% block content %}
+{% block wrap %}
 <h1>Pycon Korea 2014</h1>
 <p>blah blah</p>
 <hr>
+<h2>Sponsors</h2>
+<ul>
+{% for sponsor in sponsors %}
+<li><a href="{% url "sponsor" sponsor.id %}">{{ sponsor }}</a></li>
+{% endfor %}
+</ul>
 <h2>Announcements</h2>
 <ul>
 {% for announcement in recent_announcements %}

@@ -10,10 +10,16 @@ body, html {
     margin-bottom: 0px !important;
 }
 
-.content {
+.wrap {
     min-height: 100%;
     margin-bottom: -60px;
     padding-bottom: 60px;
+}
+
+.content {
+}
+
+.sponsors {
 }
 
 .footer {
