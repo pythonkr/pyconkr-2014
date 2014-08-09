@@ -1,6 +1,7 @@
+from django.conf import settings
 from django.conf.urls import patterns, include, url
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.contrib.flatpages import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from .views import index, RoomDetail
 from .views import SpeakerList, SpeakerDetail
 from .views import SponsorList, SponsorDetail
@@ -25,7 +26,12 @@ urlpatterns = patterns(
 )
 
 # for development
-urlpatterns += staticfiles_urlpatterns()
+if settings.DEBUG:
+    urlpatterns += staticfiles_urlpatterns()
+    urlpatterns += [
+        url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
+            {'document_root': settings.MEDIA_ROOT})
+    ]
 
 # for flatpages
 urlpatterns += [
