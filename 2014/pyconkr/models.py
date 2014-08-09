@@ -23,6 +23,7 @@ class ProgramDate(models.Model):
 
 
 class ProgramTime(models.Model):
+    name = models.CharField(max_length=100)
     begin = models.TimeField()
     end = models.TimeField()
 
@@ -39,11 +40,12 @@ class SponsorLevel(models.Model):
 
 
 class Sponsor(models.Model):
-    slug = models.CharField(max_length=100, db_index=True)
+    slug = models.SlugField(max_length=100, db_index=True)
     name = models.CharField(max_length=100, db_index=True)
     image = models.ImageField(upload_to='sponsor', null=True, blank=True)
     url = models.CharField(max_length=255, null=True, blank=True)
     desc = models.TextField(null=True, blank=True)
+    level = models.ForeignKey(SponsorLevel, null=True)
 
     def get_absolute_url(self):
         return reverse('sponsor', args=[self.slug])
@@ -53,7 +55,7 @@ class Sponsor(models.Model):
 
 
 class Speaker(models.Model):
-    slug = models.CharField(max_length=100, db_index=True)
+    slug = models.SlugField(max_length=100, db_index=True)
     name = models.CharField(max_length=100, db_index=True)
     image = models.ImageField(upload_to='sponsor', null=True, blank=True)
     desc = models.TextField(null=True, blank=True)
