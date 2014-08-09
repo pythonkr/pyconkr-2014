@@ -91,3 +91,14 @@ class Program(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+class Announcement(models.Model):
+    title = models.CharField(max_length=100, db_index=True)
+    desc = models.TextField(null=True, blank=True)
+
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
+
+    def __unicode__(self):
+        return self.title

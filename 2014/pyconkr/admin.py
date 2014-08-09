@@ -2,7 +2,8 @@ from django.contrib import admin
 from django.contrib.flatpages.models import FlatPage
 from django_summernote.admin import SummernoteModelAdmin
 from .models import (Room, Program, ProgramTime, ProgramDate,
-                     Speaker, Sponsor, SponsorLevel)
+                     Speaker, Sponsor, SponsorLevel,
+                     Announcement, )
 
 
 class RoomAdmin(SummernoteModelAdmin):
@@ -17,7 +18,7 @@ admin.site.register(ProgramDate, ProgramDateAdmin)
 
 
 class ProgramTimeAdmin(admin.ModelAdmin):
-    list_display = ('id', 'begin', 'end',)
+    list_display = ('id', 'name', 'begin', 'end',)
     ordering = ('begin',)
 admin.site.register(ProgramTime, ProgramTimeAdmin)
 
@@ -39,16 +40,23 @@ admin.site.register(SponsorLevel, SponsorLevelAdmin)
 class SpeakerAdmin(SummernoteModelAdmin):
     list_display = ('id', 'slug', 'name',)
     ordering = ('name',)
-    search_fields = ('name',)
+    search_fields = ('name', 'slug',)
 admin.site.register(Speaker, SpeakerAdmin)
 
 
 class ProgramAdmin(SummernoteModelAdmin):
-    list_display = ('id', 'name', 'desc', 'date', 'room')
+    list_display = ('id', 'name', 'date', 'room')
     ordering = ('id',)
     filter_horizontal = ('times', )
     search_fields = ('name', 'speakers__name', 'desc',)
 admin.site.register(Program, ProgramAdmin)
+
+
+class AnnouncementAdmin(SummernoteModelAdmin):
+    list_display = ('id', 'title', 'created', 'modified')
+    ordering = ('id',)
+    search_fields = ('title',)
+admin.site.register(Announcement, AnnouncementAdmin)
 
 
 class FlatPageAdmin(SummernoteModelAdmin):
