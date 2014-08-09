@@ -82,13 +82,21 @@ class Program(models.Model):
     slide_url = models.CharField(max_length=255, null=True, blank=True)
     speakers = models.ManyToManyField(Speaker, blank=True)
 
-    room = models.ForeignKey(Room)
     date = models.ForeignKey(ProgramDate)
+    rooms = models.ManyToManyField(Room, null=True, blank=True)
     times = models.ManyToManyField(ProgramTime)
-    category = models.ForeignKey(ProgramCategory, null=True)
+    category = models.ForeignKey(ProgramCategory, null=True, blank=True)
 
     def get_absolute_url(self):
         return reverse('program', args=[self.id])
+
+    def room(self):
+        rooms = self.rooms.all()
+
+        if rooms.count() == Room.objects.all().count():
+            return 'All'
+
+        return ', '.join([_.name for _ in self.rooms.all()])
 
     def begin_time(self):
         return self.times.all()[0].begin.strftime("%H:%M")

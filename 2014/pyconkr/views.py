@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from .models import (Room, Program, ProgramCategory,
+from .models import (Room,
+                     Program, ProgramDate, ProgramTime, ProgramCategory,
                      Speaker, Sponsor, Jobfair, Announcement)
 
 
@@ -11,7 +12,38 @@ def index(request):
 
 
 def schedule(request):
-    return render(request, 'schedule.html')
+    dates = ProgramDate.objects.all()
+    times = ProgramTime.objects.all()
+    rooms = Room.objects.all()
+
+    wide = {}
+    narrow = {}
+    processed = set()
+    for d in dates:
+        wide[d] = {}
+        narrow[d] = {}
+        for t in times:
+            wide[d][t] = {}
+            narrow[d][t] = {}
+            for r in rooms:
+                s = Program.objects.filter(date=d, times=t, rooms=r)
+                if s:
+                    if s[0].times.all()[0] == t and s[0].id not in processed:
+                        wide[d][t][r] = s[0]
+                        narrow[d][t][r] = s[0]
+                        processed.add(s[0].id)
+                else:
+                    wide[d][t][r] = None
+
+            if len(narrow[d][t]) == 0:
+                del(narrow[d][t])
+
+    contexts = {
+        'wide': wide,
+        'narrow': narrow,
+        'rooms': rooms,
+    }
+    return render(request, 'schedule.html', contexts)
 
 
 class RoomDetail(DetailView):
