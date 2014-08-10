@@ -1,7 +1,8 @@
 from django.core.urlresolvers import resolve
 from django.utils.translation import ugettext_lazy as _
+from django.db.models import Count
 from collections import OrderedDict
-from .models import Sponsor
+from .models import SponsorLevel
 
 
 def menu(request):
@@ -56,8 +57,8 @@ def menu(request):
 
 
 def sponsors(request):
-    sponsors = Sponsor.objects.all()
+    levels = SponsorLevel.objects.annotate(num_sponsors=Count('sponsor')).filter(num_sponsors__gt=0)
 
     return {
-        'sponsors': sponsors,
+        'levels': levels,
     }

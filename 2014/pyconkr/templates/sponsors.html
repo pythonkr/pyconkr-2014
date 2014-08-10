@@ -1,7 +1,10 @@
 {% load i18n %}
 <h3>{% trans "Sponsor list" %}</h3>
+{% for lvl in levels %}
+<h4>{{ lvl.name }}</h4>
 <ul>
-{% for obj in sponsors %}
-<li><a href="{% url "sponsor" obj.slug %}">{{ obj }}</a></li>
-{% endfor %}
+  {% for sponsor in lvl.sponsor_set.all %}
+  <li><a href="{% url "sponsor" sponsor.slug %}">{{ sponsor }}</a></li>
+  {% endfor %}
 </ul>
+{% endfor %}
