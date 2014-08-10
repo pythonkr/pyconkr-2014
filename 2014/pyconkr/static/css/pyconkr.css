@@ -11,7 +11,7 @@ body, html {
     color: #666;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, th, .title {
     font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
     font-weight: 700;
     color: #333;
@@ -68,13 +68,17 @@ h1, h2, h3, h4, h5, h6 {
 .wrap {
     min-height: 100%;
     margin-bottom: -60px;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
 }
 
 .content {
 }
 
 .sponsors {
+}
+
+.timetable .title {
+    font-size: 110%;
 }
 
 .footer {

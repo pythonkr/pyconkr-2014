@@ -5,7 +5,11 @@
 <h1>{% trans "Program list" %}</h1>
 
 {% for obj in object_list %}
-<h2>{{ obj.name }}</h2>
+<a href="#{{ obj.name|slugify}}">
+  <h2 id="{{ obj.name|slugify }}">
+    {{ obj.name }}
+  </h2>
+</a>
 <ul>
   {% for program in obj.program_set.all %}
   <li><a href="{{ program.get_absolute_url }}">{{ program.name }}</a></li>

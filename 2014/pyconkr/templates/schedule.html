@@ -1,22 +1,22 @@
 {% extends "base.html" %}
 {% block wrap %}
 {% for d, d_ in narrow.items %}
-<div class="timetable hidden-lg">
+<div class="timetable timetable-narrow visible-xs">
     <h2>{{ d }}</h2>
     <table class="table">
         <tbody>
             {% for t, t_ in d_.items %}
             <tr>
-                <th rowspan="{{ t_.items|length }}">{{ t.begin|date:"H:i" }}</th>
+                <th nowrap rowspan="{{ t_.items|length }}">{{ t.begin|date:"H:i" }}</th>
                 {% for r, s in t_.items|slice:"1" %}
-                <td class="tiny">{{ s.room }}</td>
-                <td class=""><a href="{{ s.get_absolute_url }}">{{ s }}</a></td>
+                <td nowrap>{{ s.room }}</td>
+                <td><a href="{{ s.get_absolute_url }}">{{ s }}</a></td>
                 {% endfor %}
             </tr>
             {% for r, s in t_.items|slice:"1:" %}
             <tr>
-                <td class="tiny">{{ s.room }}</td>
-                <td class="ft"><a href="{{ s.get_absolute_url }}">{{ s }}</a></td>
+                <td nowrap>{{ s.room }}</td>
+                <td><a href="{{ s.get_absolute_url }}">{{ s }}</a></td>
             </tr>
             {% endfor %}
             {% endfor %}
@@ -25,13 +25,13 @@
 </div>
 {% endfor %}
 {% for d, d_ in wide.items %}
-<div class="timetable hidden-xs">
+<div class="timetable timetable-wide hidden-xs">
     <h2>{{ d }}</h2>
     <table class="table table-striped table-bordered">
         <colgroup>
             <col width="*">
             {% for r in rooms %}
-            <col width="31%">
+            <col width="33%">
             {% endfor %}
         </colgroup>
         <thead>
@@ -43,7 +43,7 @@
         <tbody>
             {% for t, t_ in d_.items %}
             <tr>
-                <th>{{ t.begin|date:"H:i" }}</th>
+                <th nowrap>{{ t.begin|date:"H:i" }}</th>
                 {% for r, s in t_.items %}
                 {% if s %}
                 <td class="cell"

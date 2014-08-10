@@ -2,6 +2,6 @@
 <h3>{% trans "Sponsor list" %}</h3>
 <ul>
 {% for obj in sponsors %}
-<li>{{ obj }}</li>
+<li><a href="{% url "sponsor" obj.slug %}">{{ obj }}</a></li>
 {% endfor %}
 </ul>

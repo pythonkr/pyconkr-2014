@@ -1,12 +1,20 @@
 {% extends "base.html" %}
 {% block wrap %}
+<div class="bs-docs-header" id="content">
+  <div class="container">
+    <h1>CSS</h1>
+    <p>Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.</p>
+    <div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script>var z = document.createElement("script"); z.async = true; z.src = "http://engine.carbonads.com/z/32341/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
+  </div>
+</div>
+
 <h1>Pycon Korea 2014</h1>
 <p>blah blah</p>
 <hr>
 <h2>Sponsors</h2>
 <ul>
 {% for sponsor in sponsors %}
-<li><a href="{% url "sponsor" sponsor.id %}">{{ sponsor }}</a></li>
+<li><a href="{% url "sponsor" sponsor.slug %}">{{ sponsor }}</a></li>
 {% endfor %}
 </ul>
 <h2>Announcements</h2>

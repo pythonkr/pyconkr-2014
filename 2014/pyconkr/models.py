@@ -94,7 +94,7 @@ class Program(models.Model):
         rooms = self.rooms.all()
 
         if rooms.count() == Room.objects.all().count():
-            return 'All'
+            return ''
 
         return ', '.join([_.name for _ in self.rooms.all()])
 
