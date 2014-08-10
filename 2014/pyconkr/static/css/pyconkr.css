@@ -6,7 +6,6 @@
 
 body, html {
     margin: 0;
-    height: 100%;
     font-size: 15px;
     color: #666;
 }
@@ -69,12 +68,19 @@ h1, h2, h3, h4, h5, h6, th {
 }
 
 .wrap {
-    min-height: 100%;
-    margin-bottom: -60px;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
 }
 
 .content {
+}
+
+.dancheong {
+    width: 100%;
+}
+
+.dancheong td {
+    font-size: 1px;
+    line-height: 5px;
 }
 
 .sunset {
@@ -158,8 +164,6 @@ h1, h2, h3, h4, h5, h6, th {
 }
 
 .footer {
-    border-top: 1px solid #E7E7E7;
-    margin-bottom: -60px;
     padding: 10px 0;
     text-align: center;
 }
