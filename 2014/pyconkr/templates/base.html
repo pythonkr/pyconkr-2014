@@ -22,9 +22,9 @@
 
 <body>
 {% include "nav.html" %}
-{% block wrap %}
-{% endblock %}
+{% block frontpage %}{% endblock %}
 <div class="container wrap">
+    {% block wrap %}
     <div class="row">
         <div class="col-md-9 content">
             {% block content %}{% endblock %}
@@ -33,6 +33,7 @@
             {% include "sponsors.html" %}
         </div>
     </div>
+    {% endblock %}
 </div>
 {% include "footer.html" %}
 </body>
