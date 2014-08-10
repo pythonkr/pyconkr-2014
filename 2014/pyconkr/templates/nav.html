@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <nav class="navbar navbar-default" role="navigation">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -8,7 +9,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{% url "index" %}">Pycon Korea</a>
+      <a class="navbar-brand" href="{% url "index" %}">
+        <img src="{% static "image/pyconkr-logo-small.png" %}" alt="Pycon Korea">
+      </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -17,7 +20,8 @@
         {% for k, v in menu.items %}
         {% if v.dropdown %}
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ v.title }} <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-{{ v.icon }}"></span> {{ v.title }} <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
           {% for dk, dv in v.dropdown.items %}
             <li><a href="/{{ k }}/{{ dk }}">{{ dv.title }}</a></li>
@@ -26,7 +30,7 @@
         </li>
         {% else %}
         <li class="{% if v.active %}active{% endif %}">
-          <a href="/{{ k }}">{{ v.title }}</a>
+          <a href="/{{ k }}"><span class="glyphicon glyphicon-{{ v.icon }}"></span> {{ v.title }}</a>
         </li>
         {% endif %}
         {% endfor %}
@@ -35,7 +39,6 @@
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
-        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></button>
       </form>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

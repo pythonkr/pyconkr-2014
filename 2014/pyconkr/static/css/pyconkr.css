@@ -1,9 +1,20 @@
 * {
+    font-family: 'Open Sans', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
+    font-weight: 400;
+    line-height: 160%;
 }
 
 body, html {
     margin: 0;
     height: 100%;
+    font-size: 15px;
+    color: #666;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
+    font-weight: 700;
+    color: #333;
 }
 
 .row {
@@ -12,7 +23,46 @@ body, html {
 }
 
 .navbar {
+    padding: 10px 0;
     margin-bottom: 0px !important;
+}
+
+.navbar-brand {
+    float: none;
+    padding: 5px 25px 5px 15px;
+}
+
+.navbar-brand img {
+    width: 150px;
+    height: auto;
+}
+
+.navbar-default {
+    background: none;
+    border: 0;
+    border-radius: 0;
+}
+
+.navbar-default .navbar-nav>li>a, .dropdown-menu>li>a {
+    font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
+    color: #333;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: 0;
+}
+
+.navbar-default .glyphicon {
+    margin-right: 3px;
+    top: 2px;
+}
+
+.navbar-default .glyphicon-python {
+    width: 16px;
+    height: 16px;
+    background: url("../image/python-black.png");
+    background-size: 100% 100%;
+    opacity: 0.8;
 }
 
 .wrap {
@@ -32,4 +82,19 @@ body, html {
     margin-bottom: -60px;
     padding: 10px 0;
     text-align: center;
+}
+
+.footer p {
+    font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
+    font-size: 90%;
+}
+
+@media (max-width: 992px) {
+    .navbar-brand img {
+        width: 120px;
+    }
+
+    .navbar-nav>li>a {
+        padding: 10px;
+    }
 }

@@ -8,6 +8,7 @@ def menu(request):
     menu = OrderedDict([
         ('about', {
             'title': _('About'),
+            'icon': 'python',
             'dropdown': OrderedDict([
                 ('pyconkr', {'title': _('About Pycon Korea')}),
                 ('detail', {'title': _('Conference detail')}),
@@ -18,6 +19,7 @@ def menu(request):
         }),
         ('programs', {
             'title': _('Program'),
+            'icon': 'calendar',
             'dropdown': OrderedDict([
                 ('cfp', {'title': _('Call for proposal')}),
                 ('schedule', {'title': _('Schedule')}),
@@ -29,12 +31,15 @@ def menu(request):
         }),
         ('registration', {
             'title': _('Registration'),
+            'icon': 'pencil',
         }),
         ('venue', {
             'title': _('Venue'),
+            'icon': 'map-marker',
         }),
         ('contact', {
             'title': _('Contact'),
+            'icon': 'info-sign',
         }),
     ])
 
