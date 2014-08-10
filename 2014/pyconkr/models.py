@@ -69,6 +69,9 @@ class Speaker(models.Model):
     desc = models.TextField(null=True, blank=True)
     info = JSONField()
 
+    class Meta:
+        ordering = ['name']
+
     def get_absolute_url(self):
         return reverse('speaker', args=[self.slug])
 
