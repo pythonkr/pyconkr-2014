@@ -18,12 +18,12 @@ def menu(request):
             ]),
         }),
         ('programs', {
-            'title': _('Program'),
+            'title': _('Programs'),
             'icon': 'calendar',
             'dropdown': OrderedDict([
                 ('cfp', {'title': _('Call for proposal')}),
                 ('schedule', {'title': _('Schedule')}),
-                ('', {'title': _('Programs')}),
+                ('', {'title': _('Program list')}),
                 ('speakers', {'title': _('Speakers')}),
                 ('jobfair', {'title': _('Jobfair')}),
                 ('bof', {'title': _('BOF')}),

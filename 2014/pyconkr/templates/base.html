@@ -1,9 +1,10 @@
 {% load staticfiles %}
+{% load i18n %}
 <!DOCTYPE html>
 <html>
 
 <head>
-<title>{% block title %}Pycon Korea{% endblock %}</title>
+<title>{% block title %}{% trans "Pycon Korea 2014" %}{% endblock %}</title>
   <script src="{% static "components/jquery/dist/jquery.min.js" %}"></script>
   <script src="{% static "components/bootstrap/dist/js/bootstrap.min.js" %}"></script>
   <link href="{% static "components/bootstrap/dist/css/bootstrap.min.css" %}" rel="stylesheet">
@@ -21,17 +22,17 @@
 
 <body>
 {% include "nav.html" %}
+{% block wrap %}
+{% endblock %}
 <div class="container wrap">
-    {% block wrap %}
     <div class="row">
-        <div class="col-md-8 content">
+        <div class="col-md-9 content">
             {% block content %}{% endblock %}
         </div>
-        <div class="col-md-4 sponsors">
+        <div class="col-md-3 sponsors">
             {% include "sponsors.html" %}
         </div>
     </div>
-    {% endblock %}
 </div>
 {% include "footer.html" %}
 </body>

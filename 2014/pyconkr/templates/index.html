@@ -1,26 +1,41 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block head %}
+<script>
+$(function() {
+    $('.background').animate({top:0, opacity:0.1}, {duration:2500});
+    $(window).scroll(function() {
+        var top = $(document).scrollTop();
+        $('.background').offset({top:70+top/3});
+    });
+});
+</script>
+{% endblock %}
+
 {% block wrap %}
-<div class="bs-docs-header" id="content">
-  <div class="container">
-    <h1>CSS</h1>
-    <p>Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.</p>
-    <div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script>var z = document.createElement("script"); z.async = true; z.src = "http://engine.carbonads.com/z/32341/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
+<div class="sunset">
+  <div class="container slogan">
+    <img src="{% static "image/pyconkr-logo-large.png" %}">
+    <h1>{% trans "Slogan of PyCon Korea" %}</h1>
+    <p>{% trans "Information of PyCon Korea" %}</p>
+  </div>
+  <div class="background">
+    <img class="mountain" src="{% static "image/bg-mountain.png" %}">  
+    <img class="tower-1" src="{% static "image/bg-ntower.png" %}">
+    <img class="tower-2" src="{% static "image/bg-tower.png" %}">
+    <img class="tower-3" src="{% static "image/bg-tower.png" %}">
   </div>
 </div>
-
-<h1>Pycon Korea 2014</h1>
-<p>blah blah</p>
-<hr>
-<h2>Sponsors</h2>
-<ul>
-{% for sponsor in sponsors %}
-<li><a href="{% url "sponsor" sponsor.slug %}">{{ sponsor }}</a></li>
-{% endfor %}
-</ul>
-<h2>Announcements</h2>
-<ul>
-{% for announcement in recent_announcements %}
-<li><a href="{% url "announcement" announcement.id %}">{{ announcement }}</a></li>
-{% endfor %}
-</ul>
+{% endblock %}
+{% block content %}
+<div class="container wrap">
+    <h2>{% trans "Announcements" %}</h2>
+    <ul>
+    {% for announcement in recent_announcements %}
+    <li><a href="{% url "announcement" announcement.id %}">{{ announcement }}</a></li>
+    {% endfor %}
+    </ul>
+</div>
 {% endblock %}
