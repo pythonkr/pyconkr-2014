@@ -13,8 +13,11 @@ body, html {
 
 h1, h2, h3, h4, h5, h6, th, .title {
     font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
-    font-weight: 700;
     color: #333;
+}
+
+h1, h2, h3, h4, h5, h6, th {
+    font-weight: 700;
 }
 
 .row {
