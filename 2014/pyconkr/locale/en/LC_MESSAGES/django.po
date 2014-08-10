@@ -1,0 +1,127 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-10 21:52+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: context_processors.py:11
+msgid "About"
+msgstr "About"
+
+#: context_processors.py:14
+msgid "About PyCon Korea 2014"
+msgstr "About PyCon Korea 2014"
+
+#: context_processors.py:15
+msgid "Conference detail"
+msgstr "Conference detail"
+
+#: context_processors.py:16 templates/index.html:34
+#: templates/pyconkr/announcement_list.html:5
+msgid "Announcements"
+msgstr "Announcements"
+
+#: context_processors.py:17
+msgid "Sponsors"
+msgstr "Sponsors"
+
+#: context_processors.py:18
+msgid "Staff"
+msgstr "Staff"
+
+#: context_processors.py:22
+msgid "Programs"
+msgstr "Programs"
+
+#: context_processors.py:25
+msgid "Call for proposal"
+msgstr "Call for proposal"
+
+#: context_processors.py:26 templates/schedule.html:4
+msgid "Schedule"
+msgstr "Schedule"
+
+#: context_processors.py:27 templates/pyconkr/program_list.html:5
+msgid "Program list"
+msgstr "Program list"
+
+#: context_processors.py:28
+msgid "Speakers"
+msgstr "Speakers"
+
+#: context_processors.py:29 templates/pyconkr/jobfair_list.html:5
+msgid "Jobfair"
+msgstr "Jobfair"
+
+#: context_processors.py:30
+msgid "BOF"
+msgstr "BOF"
+
+#: context_processors.py:34
+msgid "Registration"
+msgstr "Registration"
+
+#: context_processors.py:38
+msgid "Venue"
+msgstr "Venue"
+
+#: context_processors.py:42
+msgid "Contact"
+msgstr "Contact"
+
+#: settings.py:87
+msgid "English"
+msgstr "English"
+
+#: settings.py:88
+msgid "Korean"
+msgstr "Korean"
+
+#: templates/base.html:7
+msgid "Pycon Korea 2014"
+msgstr "Pycon Korea 2014"
+
+#: templates/footer.html:5
+msgid "PyCon Korea 2014 is a production of the PyCon Korea Management Team"
+msgstr "PyCon Korea 2014 is a production of the PyCon Korea Management Team"
+
+#: templates/footer.html:8
+msgid "Powered by Django"
+msgstr "Powered by Django"
+
+#: templates/footer.html:10
+msgid "Code of Conduct"
+msgstr "Code of Conduct"
+
+#: templates/index.html:21
+msgid "Slogan of PyCon Korea"
+msgstr "Slogan of PyCon Korea"
+
+#: templates/index.html:22
+msgid "Information of PyCon Korea"
+msgstr "Information of PyCon Korea"
+
+#: templates/nav.html:8
+msgid "Toggle navigation"
+msgstr "Toggle navigation"
+
+#: templates/sponsors.html:2 templates/pyconkr/sponsor_list.html:5
+msgid "Sponsor list"
+msgstr "Sponsor list"
+
+#: templates/pyconkr/speaker_list.html:5
+msgid "Speaker list"
+msgstr "Speaker list"

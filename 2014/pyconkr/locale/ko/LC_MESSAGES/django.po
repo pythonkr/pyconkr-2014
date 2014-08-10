@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-10 21:52+0000\n"
+"PO-Revision-Date: 2014-08-10 21:56+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Translated-Using: django-rosetta 0.7.4\n"
+
+#: context_processors.py:11
+msgid "About"
+msgstr "파이콘 한국"
+
+#: context_processors.py:14
+msgid "About PyCon Korea 2014"
+msgstr "파이콘 한국 2014"
+
+#: context_processors.py:15
+msgid "Conference detail"
+msgstr "행사 세부 정보"
+
+#: context_processors.py:16 templates/index.html:34
+#: templates/pyconkr/announcement_list.html:5
+msgid "Announcements"
+msgstr "알림"
+
+#: context_processors.py:17
+msgid "Sponsors"
+msgstr "스폰서"
+
+#: context_processors.py:18
+msgid "Staff"
+msgstr "준비의원회 및 자원봉사자"
+
+#: context_processors.py:22
+msgid "Programs"
+msgstr "프로그램"
+
+#: context_processors.py:25
+msgid "Call for proposal"
+msgstr "발표자 모집"
+
+#: context_processors.py:26 templates/schedule.html:4
+msgid "Schedule"
+msgstr "세부 일정"
+
+#: context_processors.py:27 templates/pyconkr/program_list.html:5
+msgid "Program list"
+msgstr "프로그램 목록"
+
+#: context_processors.py:28
+msgid "Speakers"
+msgstr "발표자"
+
+#: context_processors.py:29 templates/pyconkr/jobfair_list.html:5
+msgid "Jobfair"
+msgstr "잡페어"
+
+#: context_processors.py:30
+msgid "BOF"
+msgstr "BOF"
+
+#: context_processors.py:34
+msgid "Registration"
+msgstr "등록 절차"
+
+#: context_processors.py:38
+msgid "Venue"
+msgstr "위치 안내"
+
+#: context_processors.py:42
+msgid "Contact"
+msgstr "연락처"
+
+#: settings.py:87
+msgid "English"
+msgstr "영어"
+
+#: settings.py:88
+msgid "Korean"
+msgstr "한국어"
+
+#: templates/base.html:7
+msgid "Pycon Korea 2014"
+msgstr "파이콘 한국 2014"
+
+#: templates/footer.html:5
+msgid "PyCon Korea 2014 is a production of the PyCon Korea Management Team"
+msgstr "파이콘 한국 2014는 파이썬 한국 준비위원회가 만듭니다."
+
+#: templates/footer.html:8
+msgid "Powered by Django"
+msgstr "Powered by Django"
+
+#: templates/footer.html:10
+msgid "Code of Conduct"
+msgstr "Code of Conduct"
+
+#: templates/index.html:21
+msgid "Slogan of PyCon Korea"
+msgstr "파이콘 코리아 2014"
+
+#: templates/index.html:22
+msgid "Information of PyCon Korea"
+msgstr "숙명여대 8월 30일"
+
+#: templates/nav.html:8
+msgid "Toggle navigation"
+msgstr "툴바 토글"
+
+#: templates/sponsors.html:2 templates/pyconkr/sponsor_list.html:5
+msgid "Sponsor list"
+msgstr "스폰서 목록"
+
+#: templates/pyconkr/speaker_list.html:5
+msgid "Speaker list"
+msgstr "발표자 목록"

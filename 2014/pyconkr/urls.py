@@ -39,6 +39,12 @@ if settings.DEBUG:
             {'document_root': settings.MEDIA_ROOT})
     ]
 
+# for rosetta
+if 'rosetta' in settings.INSTALLED_APPS:
+    urlpatterns += [
+        url(r'^rosetta/', include('rosetta.urls')),
+    ]
+
 # for flatpages
 urlpatterns += [
     url(r'^(?P<url>.*/)$', views.flatpage),

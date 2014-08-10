@@ -43,6 +43,7 @@ INSTALLED_APPS = (
 ) + (
     # thirt-party apps
     'django_summernote',
+    'rosetta',
     'south',
 ) + (
     # local apps
@@ -56,6 +57,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 )
 
 ROOT_URLCONF = 'pyconkr.urls'
@@ -80,6 +82,11 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
+_ = lambda s: s
+LANGUAGES = (
+    ('en', _('English')),
+    ('ko', _('Korean')),
+)
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
