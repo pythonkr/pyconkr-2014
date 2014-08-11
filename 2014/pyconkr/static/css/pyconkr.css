@@ -382,6 +382,17 @@ h1, h2, h3, h4, h5, h6, th {
     padding: 10px 0 20px;
 }
 
+.badges {
+    position: relative;
+    width: 100%;
+}
+
+.badges .fb_iframe_widget {
+    position: relative;
+    line-height: 100%;
+    top: -2px;
+}
+
 @media (max-width: 992px) {
     .navbar-nav>li>a {
         padding: 10px;

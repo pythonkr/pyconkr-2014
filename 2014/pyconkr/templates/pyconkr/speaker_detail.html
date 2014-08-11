@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block content %}
+{% include "badge/all.html" %}
 <div class="speaker">
   {% if speaker.image %}
   <img class="image" src="{{ speaker.image.url }}" alt="photo of {{ speaker.slug }}">

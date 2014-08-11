@@ -6,13 +6,19 @@
 {% endblock %}
 
 {% block content %}
+{% include "badge/all.html" %}
 <ul class="list-group">
+  <li class="list-group-item">
+    <span class="glyphicon glyphicon-tag"></span> {{ object.category }}
+  </li>
   <li class="list-group-item">
     <span class="glyphicon glyphicon-time"></span> {{ object.date }} {{ object.get_times }}
   </li>
+  {% if object.room %}
   <li class="list-group-item">
     <span class="glyphicon glyphicon-map-marker"></span> {{ object.room }}
   </li>
+  {% endif %}
   <li class="list-group-item">
     {% for speaker in object.speakers.all %}
     <div class="speaker-small">
