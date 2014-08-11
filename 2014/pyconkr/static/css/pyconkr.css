@@ -346,6 +346,16 @@ h1, h2, h3, h4, h5, h6, th {
     font-size: 110%;
 }
 
+.jobfair dt img {
+    width: auto;
+    height: 64px;
+}
+
+.well {
+    background: #FFF !important;
+    margin: 14px 0 20px;
+}
+
 .speakers img {
     width: 64px;
     height: 64px;
@@ -427,5 +437,14 @@ h1, h2, h3, h4, h5, h6, th {
 
     .titlebar h1 {
         font-size: 28px;
+    }
+
+    .well {
+        margin: 14px -12px;
+    }
+
+    .jobfair dt img {
+        width: auto;
+        height: 32px;
     }
 }
