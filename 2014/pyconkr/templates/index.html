@@ -25,6 +25,7 @@ $(function() {
     <img src="{% static "image/pyconkr-logo-large.png" %}">
     <h1>{% trans "Slogan of PyCon Korea" %}</h1>
     <p>{% trans "Information of PyCon Korea" %}</p>
+    {% include "badge/all.html" %}
   </div>
   <img class="building" src="{% static "image/bg-building.png" %}">
   <div class="background">
