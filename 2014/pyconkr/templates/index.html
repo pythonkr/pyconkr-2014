@@ -34,20 +34,28 @@ $(function() {
     <img class="tower-3" src="{% static "image/bg-tower.png" %}">
   </div>
   <div class="courtesy">
-      <a href="/courtesy/geunjung-jun/">
-          Image courtesy of Doo Ho Kim, 2003
-      </a>
+    <a href="/courtesy/geunjung-jun/">
+      Image courtesy of Doo Ho Kim, 2003
+    </a>
   </div>
 </div>
 {% include "dancheong.html" %}
 {% endblock %}
 {% block content %}
 <div class="wrap">
-    <h2>{% trans "Announcements" %}</h2>
-    <ul>
-    {% for announcement in recent_announcements %}
-    <li><a href="{% url "announcement" announcement.id %}">{{ announcement }}</a></li>
-    {% endfor %}
-    </ul>
+  <h2>{% trans "Announcements" %}</h2>
+  <dl class="announcements">
+  {% for announcement in recent_announcements %}
+    <dt>
+      <h4>
+        <a href="{% url "announcement" announcement.id %}">{{ announcement }}</a>
+        <span class="datetime">{{ announcement.created }}</span>
+      </h4>
+    </dt>
+    <dd>
+      {{ announcement.desc|striptags|truncatechars:300 }}
+    </dd>
+  {% endfor %}
+  </dl>
 </div>
 {% endblock %}

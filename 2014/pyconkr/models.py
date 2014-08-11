@@ -33,6 +33,7 @@ class ProgramTime(models.Model):
 
 class ProgramCategory(models.Model):
     name = models.CharField(max_length=100, db_index=True)
+    slug = models.SlugField(max_length=100, db_index=True)
 
     def __unicode__(self):
         return self.name
@@ -119,6 +120,9 @@ class Announcement(models.Model):
 
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['-id']
 
     def __unicode__(self):
         return self.title

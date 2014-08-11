@@ -3,8 +3,8 @@
 
 {% block content %}
 {% for obj in object_list %}
-<a href="#{{ obj.name|slugify}}">
-  <h2 id="{{ obj.name|slugify }}">
+<a href="#{{ obj.slug }}">
+  <h2 id="{{ obj.slug }}">
     {{ obj.name }}
   </h2>
 </a>

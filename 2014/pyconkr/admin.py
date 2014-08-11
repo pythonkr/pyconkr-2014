@@ -26,8 +26,8 @@ admin.site.register(ProgramTime, ProgramTimeAdmin)
 
 
 class ProgramCategoryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name',)
-    list_editable = ('name',)
+    list_display = ('id', 'name', 'slug',)
+    list_editable = ('name', 'slug',)
 admin.site.register(ProgramCategory, ProgramCategoryAdmin)
 
 

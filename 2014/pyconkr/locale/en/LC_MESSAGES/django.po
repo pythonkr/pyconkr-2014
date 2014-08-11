@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-11 07:25+0000\n"
-"PO-Revision-Date: 2014-08-11 07:25+0000\n"
+"PO-Revision-Date: 2014-08-11 09:20+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -109,11 +109,11 @@ msgstr "Powered by Django"
 
 #: templates/index.html:26
 msgid "Slogan of PyCon Korea"
-msgstr "Slogan of PyCon Korea"
+msgstr "The First PyCon in Korea"
 
 #: templates/index.html:27
 msgid "Information of PyCon Korea"
-msgstr "Information of PyCon Korea"
+msgstr "Aug 30 '14 at Sookmyung Women's University"
 
 #: templates/nav.html:8
 msgid "Toggle navigation"
