@@ -294,10 +294,6 @@ h1, h2, h3, h4, h5, h6, th {
 }
 
 @media (max-width: 992px) {
-    .navbar-brand img {
-        height: 40px;
-    }
-
     .navbar-nav>li>a {
         padding: 10px;
     }
