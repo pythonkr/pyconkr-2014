@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-10 21:52+0000\n"
-"PO-Revision-Date: 2014-08-10 21:56+0000\n"
+"PO-Revision-Date: 2014-08-11 02:51+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgstr "파이콘 한국 2014"
 
 #: context_processors.py:15
 msgid "Conference detail"
-msgstr "행사 세부 정보"
+msgstr "행사 상세 정보"
 
 #: context_processors.py:16 templates/index.html:34
 #: templates/pyconkr/announcement_list.html:5
