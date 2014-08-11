@@ -184,6 +184,27 @@ h1, h2, h3, h4, h5, h6, th {
 .sponsors {
 }
 
+.sponsors h4 {
+}
+
+.sponsors ul {
+    margin: 0;
+    padding: 0;
+}
+
+.sponsors li {
+    list-style: none;
+    display: inline-block;
+    width: 49%;
+    max-width: 280px;
+}
+
+.sponsors li .logo {
+    width: 100%;
+    padding: 5%;
+    height: auto;
+}
+
 .timetable .title {
     font-size: 110%;
 }
@@ -199,9 +220,9 @@ h1, h2, h3, h4, h5, h6, th {
 }
 
 .footer .pyconkr-badge {
-    width: 64px;
-    height: 64px;
-    padding: 10px;
+    width: 128px;
+    height: auto;
+    padding: 10px 0 20px;
 }
 
 @media (max-width: 992px) {

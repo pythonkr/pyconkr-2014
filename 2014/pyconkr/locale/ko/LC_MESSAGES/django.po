@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-10 21:52+0000\n"
-"PO-Revision-Date: 2014-08-11 02:51+0000\n"
+"PO-Revision-Date: 2014-08-11 05:05+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -38,11 +38,11 @@ msgstr "알림"
 
 #: context_processors.py:17
 msgid "Sponsors"
-msgstr "스폰서"
+msgstr "후원사"
 
 #: context_processors.py:18
 msgid "Staff"
-msgstr "준비의원회 및 자원봉사자"
+msgstr "준비위원회 및 자원봉사자"
 
 #: context_processors.py:22
 msgid "Programs"
@@ -98,7 +98,7 @@ msgstr "파이콘 한국 2014"
 
 #: templates/footer.html:5
 msgid "PyCon Korea 2014 is a production of the PyCon Korea Management Team"
-msgstr "파이콘 한국 2014는 파이썬 한국 준비위원회가 만듭니다."
+msgstr "파이콘 한국 2014는 파이콘 한국 준비위원회가 만들고 있습니다."
 
 #: templates/footer.html:8
 msgid "Powered by Django"
@@ -110,11 +110,11 @@ msgstr "Code of Conduct"
 
 #: templates/index.html:21
 msgid "Slogan of PyCon Korea"
-msgstr "파이콘 코리아 2014"
+msgstr "한국에서 열리는 첫번째 파이콘"
 
 #: templates/index.html:22
 msgid "Information of PyCon Korea"
-msgstr "숙명여대 8월 30일"
+msgstr "2014년 8월 30일, 숙명여대에서 열립니다."
 
 #: templates/nav.html:8
 msgid "Toggle navigation"
@@ -122,7 +122,7 @@ msgstr "툴바 토글"
 
 #: templates/sponsors.html:2 templates/pyconkr/sponsor_list.html:5
 msgid "Sponsor list"
-msgstr "스폰서 목록"
+msgstr "후원사 목록"
 
 #: templates/pyconkr/speaker_list.html:5
 msgid "Speaker list"

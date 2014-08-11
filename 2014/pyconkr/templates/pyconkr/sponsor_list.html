@@ -2,10 +2,5 @@
 {% load i18n %}
 
 {% block wrap %}
-<h1>{% trans "Sponsor list" %}</h1>
-<ul>
-  {% for obj in object_list %}
-  <li><a href="{{ obj.get_absolute_url }}">{{ obj }}</a></li>
-  {% endfor %}
-</ul>
+{% include "sponsors.html" %}
 {% endblock %}
