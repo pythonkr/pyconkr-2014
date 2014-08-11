@@ -5,7 +5,12 @@
 
 <head>
 <title>{% block title %}{% trans "Pycon Korea 2014" %}{% endblock %}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=0.85">
+  {% include "seo.html" %}  
+
+  <!-- Include basic items -->
   <script src="{% static "components/jquery/dist/jquery.min.js" %}"></script>
   <script src="{% static "components/bootstrap/dist/js/bootstrap.min.js" %}"></script>
   <link href="{% static "components/bootstrap/dist/css/bootstrap.min.css" %}" rel="stylesheet">
