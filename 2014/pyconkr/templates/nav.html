@@ -36,6 +36,19 @@
         {% endif %}
         {% endfor %}
       </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Language" %} <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+            <li>
+                <a href="{% url 'setlang' language.code %}">{{ language.name_local }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+      </ul>
       <!--
       <form class="navbar-form navbar-right" role="search">
         <div class="form-group">

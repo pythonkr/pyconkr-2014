@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.contrib.flatpages import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from .views import index, schedule
+from .views import index, schedule, setlang, robots
 from .views import RoomDetail, JobfairList
 from .views import AnnouncementList, AnnouncementDetail
 from .views import SpeakerList, SpeakerDetail
@@ -27,6 +27,8 @@ urlpatterns = patterns(
     url(r'^programs/schedule/$', schedule, name='schedule'),
     url(r'^programs/jobfair/$', JobfairList.as_view(), name='jobfair'),
 
+    url(r'^lang/(?P<lang_code>.*)/$', setlang, name='setlang'),
+    url(r'^robots.txt$', robots, name='robots'),
     url(r'^summernote/', include('django_summernote.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )

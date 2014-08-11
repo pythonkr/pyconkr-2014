@@ -84,8 +84,8 @@ DATABASES = {
 
 _ = lambda s: s
 LANGUAGES = (
-    ('en', _('English')),
     ('ko', _('Korean')),
+    ('en', _('English')),
 )
 LANGUAGE_CODE = 'en-us'
 
@@ -121,7 +121,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.tz',
     'django.core.context_processors.request',
-    'django.contrib.messages.context_processors.messages',
     'pyconkr.context_processors.menu',
     'pyconkr.context_processors.sponsors',
 )
