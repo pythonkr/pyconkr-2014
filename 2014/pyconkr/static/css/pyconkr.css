@@ -76,10 +76,64 @@ h1, h2, h3, h4, h5, h6, th {
 }
 
 .titlebar {
+    position: relative;
     background-color: #FAFAFA;
-    padding: 8px 0 16px 0;
-    margin-bottom: 8px;
+    padding: 12px 0 20px 0;
+    margin-bottom: 10px;
     border-bottom: 1px solid #E7E7E7;
+    overflow: hidden;
+}
+
+.titlebar h1 {
+    font-size: 42px;
+}
+
+.titlebar .building {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: 0px;
+    right: 0;
+    z-index: 2;
+}
+
+.titlebar .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+}
+
+.titlebar .background .mountain {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    bottom: -15%;
+}
+
+.titlebar .background .tower-1 {
+    position: absolute;
+    left: 64%;
+    width: auto;
+    height: 70%;
+    bottom: 27%;
+}
+
+.titlebar .background .tower-2 {
+    position: absolute;
+    left: 65%;
+    width: auto;
+    height: 30%;
+    bottom: 27%;
+}
+
+.titlebar .background .tower-3 {
+    position: absolute;
+    left: 92%;
+    width: auto;
+    height: 50%;
+    bottom: 23%;
 }
 
 .dancheong {
@@ -89,15 +143,6 @@ h1, h2, h3, h4, h5, h6, th {
 .dancheong td {
     font-size: 1px;
     line-height: 4px;
-}
-
-.building {
-    position: absolute;
-    width: 50%;
-    height: auto;
-    top: 220px;
-    right: 0;
-    z-index: 2;
 }
 
 .frontpage {
@@ -112,6 +157,15 @@ h1, h2, h3, h4, h5, h6, th {
     background-repeat: repeat-x;
     overflow: hidden;
     z-index: 1;
+}
+
+.frontpage .building {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 220px;
+    right: 0;
+    z-index: 2;
 }
 
 .frontpage .courtesy {
@@ -243,10 +297,19 @@ h1, h2, h3, h4, h5, h6, th {
     .navbar-nav>li>a {
         padding: 10px;
     }
+
+    .titlebar {
+        padding: 8px 0 16px 0;
+        margin-bottom: 8px;
+    }
+
+    .titlebar h1 {
+        font-size: 36px;
+    }
 }
 
 @media (max-width: 480px) {
-    .frontpage .courtesy, .building {
+    .frontpage .courtesy, .building, .titlebar .background {
         display: none;
     }
 
@@ -258,5 +321,4 @@ h1, h2, h3, h4, h5, h6, th {
     .titlebar h1 {
         font-size: 28px;
     }
-
 }
