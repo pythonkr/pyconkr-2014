@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load i18n %}
 
+{% block og-title %}{{ speaker.name }}{% endblock %}
+{% block og-image %}{{ speaker.image.url }}{% endblock %}
+{% block og-desc %}{{ speaker.desc|striptags }}{% endblock %}
+
 {% block titlebar %}
 {% include "titlebar.html" with title=object %}
 {% endblock %}

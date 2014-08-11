@@ -8,7 +8,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=0.85">
-  {% include "seo.html" %}  
+
+  <!-- Opengraph tag -->
+  <meta property="og:site_name" content="파이콘 한국 2014">
+  <meta property="og:title" content="{% block og-title %}PyCon Korea 2014{% endblock %}">
+  <meta property="og:image" content="{{ domain }}{% block og-image %}{% static "image/pyconkr-badge.png" %}{% endblock %}">
+  <meta property="og:url" content="{{ domain }}{{ request.path }}">
+  <meta property="og:description" content="{% block og-desc %}파이콘은 오픈소스 프로그래밍 언어인 파이썬 사용자들을 위한 행사입니다. 올해 한국에서 처음으로 열리는 파이콘 한국 2014 는 개발자들의 지식과 경험을 공유하여 한국 개발자 커뮤니티와 파이썬의 활성화에 기여하고자 합니다.{% endblock %}">
 
   <!-- Include basic items -->
   <script src="{% static "components/jquery/dist/jquery.min.js" %}"></script>

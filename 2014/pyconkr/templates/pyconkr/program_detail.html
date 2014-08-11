@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load i18n %}
 
+{% block og-title %}{{ program.name }}{% endblock %}
+{% block og-desc %}{{ program.desc|striptags|safe }}{% endblock %}
+
 {% block titlebar %}
 {% include "titlebar.html" with title=object.name %}
 {% endblock %}

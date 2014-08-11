@@ -15,7 +15,7 @@
     </a>
     <div class="media-body">
       <h4 class="media-heading">
-        {{ obj.name }} / {{ obj.slug }}
+        <a href="{{ obj.get_absolute_url }}">{{ obj.name }} / {{ obj.slug }}</a>
         <span class="badges hidden-xs">{{ obj.get_badges_xs|safe }}</span>
       </h4>
       <!--{{ obj.desc|striptags|truncatechars:200|safe }}-->

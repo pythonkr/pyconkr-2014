@@ -124,3 +124,5 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'pyconkr.context_processors.menu',
     'pyconkr.context_processors.sponsors',
 )
+
+DOMAIN = 'http://dev.pycon.kr/2014'

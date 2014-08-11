@@ -1,4 +1,4 @@
-from django.core.urlresolvers import resolve
+from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from django.db.models import Count
 from collections import OrderedDict
@@ -64,6 +64,7 @@ def menu(request):
     return {
         'menu': menu,
         'title': title,
+        'domain': settings.DOMAIN,
     }
 
 
