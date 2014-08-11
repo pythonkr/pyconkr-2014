@@ -35,8 +35,8 @@ h1, h2, h3, h4, h5, h6, th {
 }
 
 .navbar-brand img {
-    width: 150px;
-    height: auto;
+    width: auto;
+    height: 50px;
 }
 
 .navbar-default {
@@ -83,12 +83,18 @@ h1, h2, h3, h4, h5, h6, th {
     line-height: 5px;
 }
 
-.sunset {
+.building {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 220px;
+    right: 0;
+    z-index: 2;
+}
+
+.frontpage {
     position: relative;
-    padding: 8% 0 15% 0;
-    color: #FAFAFA;
-    text-align: center;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    padding: 4% 0 19% 0;
     background-color: #8795AD;
     background-image: -webkit-gradient(linear,left top,left bottom,from(#FFFFFF),to(#8795AD));
     background-image: -webkit-linear-gradient(top,#FFFFFF 0,#8795AD 100%);
@@ -100,30 +106,49 @@ h1, h2, h3, h4, h5, h6, th {
     z-index: 1;
 }
 
-.slogan {
+.frontpage .courtesy {
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    margin: 5px;
+}
+
+.frontpage .courtesy a {
+    z-index: 3;
+    color: #EEE;
+    font-size: 9px;
+    line-height: 9px;
+    opacity: 0.5;
+}
+
+.frontpage .slogan {
+    color: #FAFAFA;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
     position: relative;
-    z-index: 2;
+    z-index: 3;
     top: 10%;
 }
 
-.slogan img {
+.frontpage .slogan img {
     width: 50%;
     height: auto;
 }
 
-.slogan h1 {
+.frontpage .slogan h1 {
     color: #FFFFFF;
 }
 
-.sunset .background {
+.frontpage .background {
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
-    top: 200px;
+    top: 300px;
+    z-index: 1;
 }
 
-.background .mountain {
+.frontpage .background .mountain {
     position: absolute;
     width: 100%;
     height: 25%;
@@ -131,28 +156,28 @@ h1, h2, h3, h4, h5, h6, th {
     bottom: 0;
 }
 
-.background .tower-1 {
+.frontpage .background .tower-1 {
+    position: absolute;
+    left: 22%;
+    width: 2%;
+    height: auto;
+    bottom: 20%;
+}
+
+.frontpage .background .tower-2 {
     position: absolute;
     left: 75%;
     width: 2%;
     height: auto;
-    bottom: 15%;
+    bottom: 16%;
 }
 
-.background .tower-2 {
+.frontpage .background .tower-3 {
     position: absolute;
     left: 25%;
-    width: 2%;
-    height: auto;
-    bottom: 21%;
-}
-
-.background .tower-3 {
-    position: absolute;
-    left: 73%;
     width: 1.25%;
     height: auto;
-    bottom: 15%;
+    bottom: 22%;
 }
 
 
@@ -173,12 +198,24 @@ h1, h2, h3, h4, h5, h6, th {
     font-size: 90%;
 }
 
+.footer .pyconkr-badge {
+    width: 64px;
+    height: 64px;
+    padding: 10px;
+}
+
 @media (max-width: 992px) {
     .navbar-brand img {
-        width: 120px;
+        height: 40px;
     }
 
     .navbar-nav>li>a {
         padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .frontpage .courtesy, .building {
+        display: none;
     }
 }
