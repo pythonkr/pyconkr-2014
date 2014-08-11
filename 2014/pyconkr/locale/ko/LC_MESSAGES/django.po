@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-11 07:25+0000\n"
-"PO-Revision-Date: 2014-08-11 10:08+0000\n"
+"POT-Creation-Date: 2014-08-11 15:46+0000\n"
+"PO-Revision-Date: 2014-08-11 15:48+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,72 +19,71 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Translated-Using: django-rosetta 0.7.4\n"
 
-#: context_processors.py:11
+#: context_processors.py:12
 msgid "About"
 msgstr "파이콘 한국"
 
-#: context_processors.py:14
+#: context_processors.py:15
 msgid "About PyCon Korea 2014"
 msgstr "파이콘 한국 2014"
 
-#: context_processors.py:15 templates/footer.html:12
+#: context_processors.py:16 templates/footer.html:12
 msgid "Code of Conduct"
-msgstr "파이콘 행동 강령"
+msgstr "파이콘 성명서"
 
-#: context_processors.py:16
+#: context_processors.py:17
 msgid "Conference detail"
 msgstr "행사 상세 정보"
 
-#: context_processors.py:17 templates/index.html:45
-#: templates/pyconkr/announcement_list.html:5
+#: context_processors.py:18 templates/index.html:46
 msgid "Announcements"
 msgstr "알림"
 
-#: context_processors.py:18
+#: context_processors.py:19
 msgid "Sponsors"
 msgstr "후원사"
 
-#: context_processors.py:19
+#: context_processors.py:20
 msgid "Staff"
 msgstr "준비위원회 및 자원봉사자"
 
-#: context_processors.py:23
+#: context_processors.py:24
 msgid "Programs"
 msgstr "프로그램"
 
-#: context_processors.py:26
+#: context_processors.py:27
 msgid "Call for proposal"
 msgstr "발표자 모집"
 
-#: context_processors.py:27 templates/schedule.html:4
+#: context_processors.py:28
 msgid "Schedule"
 msgstr "세부 일정"
 
-#: context_processors.py:28 templates/pyconkr/program_list.html:5
+#: context_processors.py:29
 msgid "Program list"
 msgstr "프로그램 목록"
 
-#: context_processors.py:29
+#: context_processors.py:30
 msgid "Speakers"
 msgstr "발표자"
 
-#: context_processors.py:30 templates/pyconkr/jobfair_list.html:5
+#: context_processors.py:31
 msgid "Jobfair"
 msgstr "잡페어"
 
-#: context_processors.py:31
+#: context_processors.py:32
 msgid "BOF"
 msgstr "BOF 안내"
 
-#: context_processors.py:35
+#: context_processors.py:36
 msgid "Registration"
 msgstr "등록 절차"
 
-#: context_processors.py:39
+#: context_processors.py:40
 msgid "Venue"
 msgstr "행사장 안내"
 
-#: context_processors.py:43
+#: context_processors.py:44
 msgid "Contact"
 msgstr "연락처"
 
@@ -116,18 +115,37 @@ msgstr "한국에서 열리는 첫 번째 파이콘"
 msgid "Information of PyCon Korea"
 msgstr "2014년 8월 30일, 숙명여대에서 열립니다."
 
+#: templates/index.html:58
+msgid "Read more"
+msgstr "더 보기"
+
 #: templates/nav.html:8
 msgid "Toggle navigation"
 msgstr "툴바 토글"
 
-#: templates/nav.html:41
+#: templates/nav.html:43
 msgid "Language"
 msgstr "언어 / Language"
+
+#: templates/schedule.html:6
+msgid "Schedule may be subject to change."
+msgstr "일정은 예고 없이 변경될 수 있습니다."
 
 #: templates/sponsors.html:2
 msgid "Sponsor list"
 msgstr "후원사 목록"
 
-#: templates/pyconkr/speaker_list.html:5
-msgid "Speaker list"
-msgstr "발표자 목록"
+#: templates/pyconkr/program_detail.html:9
+msgid "Speaker"
+msgstr "발표자"
+
+#: templates/pyconkr/program_detail.html:21
+msgid "Description"
+msgstr "설명"
+
+#: templates/pyconkr/speaker_detail.html:14
+msgid "Profile"
+msgstr "프로필"
+
+#~ msgid "Speaker list"
+#~ msgstr "발표자 목록"

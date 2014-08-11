@@ -53,7 +53,7 @@ $(function() {
       </h4>
     </dt>
     <dd>
-      {{ announcement.desc|striptags|truncatechars:300 }}
+      {{ announcement.desc|striptags|truncatechars:300|safe }}
       <a href="{% url "announcement" announcement.id %}">
         <span class="continue">{% trans "Read more" %}</span>
       </a>

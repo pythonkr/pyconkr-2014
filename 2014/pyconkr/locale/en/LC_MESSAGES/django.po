@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-11 07:25+0000\n"
-"PO-Revision-Date: 2014-08-11 09:20+0000\n"
+"POT-Creation-Date: 2014-08-11 15:46+0000\n"
+"PO-Revision-Date: 2014-08-11 15:48+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,72 +18,71 @@ msgstr ""
 "Language: \n"
 "X-Translated-Using: django-rosetta 0.7.4\n"
 
-#: context_processors.py:11
+#: context_processors.py:12
 msgid "About"
 msgstr "About"
 
-#: context_processors.py:14
+#: context_processors.py:15
 msgid "About PyCon Korea 2014"
 msgstr "About PyCon Korea 2014"
 
-#: context_processors.py:15 templates/footer.html:12
+#: context_processors.py:16 templates/footer.html:12
 msgid "Code of Conduct"
 msgstr "Code of Conduct"
 
-#: context_processors.py:16
+#: context_processors.py:17
 msgid "Conference detail"
 msgstr "Conference detail"
 
-#: context_processors.py:17 templates/index.html:45
-#: templates/pyconkr/announcement_list.html:5
+#: context_processors.py:18 templates/index.html:46
 msgid "Announcements"
 msgstr "Announcements"
 
-#: context_processors.py:18
+#: context_processors.py:19
 msgid "Sponsors"
 msgstr "Sponsors"
 
-#: context_processors.py:19
+#: context_processors.py:20
 msgid "Staff"
 msgstr "Staff"
 
-#: context_processors.py:23
+#: context_processors.py:24
 msgid "Programs"
 msgstr "Programs"
 
-#: context_processors.py:26
+#: context_processors.py:27
 msgid "Call for proposal"
 msgstr "Call for proposal"
 
-#: context_processors.py:27 templates/schedule.html:4
+#: context_processors.py:28
 msgid "Schedule"
 msgstr "Schedule"
 
-#: context_processors.py:28 templates/pyconkr/program_list.html:5
+#: context_processors.py:29
 msgid "Program list"
 msgstr "Program list"
 
-#: context_processors.py:29
+#: context_processors.py:30
 msgid "Speakers"
 msgstr "Speakers"
 
-#: context_processors.py:30 templates/pyconkr/jobfair_list.html:5
+#: context_processors.py:31
 msgid "Jobfair"
 msgstr "Jobfair"
 
-#: context_processors.py:31
+#: context_processors.py:32
 msgid "BOF"
 msgstr "BOF"
 
-#: context_processors.py:35
+#: context_processors.py:36
 msgid "Registration"
 msgstr "Registration"
 
-#: context_processors.py:39
+#: context_processors.py:40
 msgid "Venue"
 msgstr "Venue"
 
-#: context_processors.py:43
+#: context_processors.py:44
 msgid "Contact"
 msgstr "Contact"
 
@@ -115,18 +114,37 @@ msgstr "The First PyCon in Korea"
 msgid "Information of PyCon Korea"
 msgstr "Aug 30 '14 at Sookmyung Women's University"
 
+#: templates/index.html:58
+msgid "Read more"
+msgstr "Read more"
+
 #: templates/nav.html:8
 msgid "Toggle navigation"
 msgstr "Toggle navigation"
 
-#: templates/nav.html:41
+#: templates/nav.html:43
 msgid "Language"
 msgstr "Language"
+
+#: templates/schedule.html:6
+msgid "Schedule may be subject to change."
+msgstr "Schedule may be subject to change."
 
 #: templates/sponsors.html:2
 msgid "Sponsor list"
 msgstr "Sponsor list"
 
-#: templates/pyconkr/speaker_list.html:5
-msgid "Speaker list"
-msgstr "Speaker list"
+#: templates/pyconkr/program_detail.html:9
+msgid "Speaker"
+msgstr "Speaker"
+
+#: templates/pyconkr/program_detail.html:21
+msgid "Description"
+msgstr "Description"
+
+#: templates/pyconkr/speaker_detail.html:14
+msgid "Profile"
+msgstr "Profile"
+
+#~ msgid "Speaker list"
+#~ msgstr "Speaker list"

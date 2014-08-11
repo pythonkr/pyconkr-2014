@@ -5,5 +5,10 @@
 {% endblock %}
 
 {% block content %}
-{{ object.desc|safe }}
+<div class="sponsor">
+  <img src="{{ MEDIA_URL }}{{ object.image }}" alt="{{ object.name }}">
+  <div>
+    {{ object.desc|safe }}
+  </div>
+</div>
 {% endblock %}

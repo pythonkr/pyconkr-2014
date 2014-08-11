@@ -74,6 +74,10 @@ h1, h2, h3, h4, h5, h6, th {
     padding-bottom: 100px;
 }
 
+.content img {
+    max-width: 100%;
+}
+
 .titlebar {
     position: relative;
     background-color: #FAFAFA;
@@ -350,7 +354,7 @@ h1, h2, h3, h4, h5, h6, th {
 }
 
 .footer .pyconkr-badge {
-    width: 128px;
+    width: 96px;
     height: auto;
     padding: 10px 0 20px;
 }
@@ -376,6 +380,10 @@ h1, h2, h3, h4, h5, h6, th {
 @media (max-width: 480px) {
     .frontpage .courtesy, .building, .titlebar .background {
         display: none;
+    }
+
+    .footer .pyconkr-badge {
+        width: 64px;
     }
 
     .titlebar {
