@@ -327,8 +327,16 @@ h1, h2, h3, h4, h5, h6, th {
     border-color: rgba(0, 0, 0, 0.2);
 }
 
+.list-group-item {
+    font-size: 125%;
+}
+
+.speaker-small {
+    display: inline-block;
+}
+
 .speaker-small .image {
-    width: 100px;
+    width: 24px;
     height: auto;
     border: 1px solid #E7E7E7;
     border-radius: 100px;
