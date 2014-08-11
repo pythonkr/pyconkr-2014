@@ -1,5 +1,8 @@
-Django>=1.6.5
-Pillow>=2.5.1
-South>=1.0
-django-jsonfield>=0.9.13
-django-summernote>=0.5.13
+Django==1.6.5
+Pillow==2.5.1
+South==1.0
+django-jsonfield==0.9.13
+django-rosetta==0.7.4
+django-summernote==0.5.13
+polib==1.0.4
+requests==2.3.0
