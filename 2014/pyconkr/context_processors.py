@@ -12,6 +12,7 @@ def menu(request):
             'icon': 'python',
             'dropdown': OrderedDict([
                 ('pyconkr', {'title': _('About PyCon Korea 2014')}),
+                ('coc', {'title': _('Code of Conduct')}),
                 ('detail', {'title': _('Conference detail')}),
                 ('announcements', {'title': _('Announcements')}),
                 ('sponsors', {'title': _('Sponsors')}),
