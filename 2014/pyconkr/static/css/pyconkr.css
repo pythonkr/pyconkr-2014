@@ -68,10 +68,10 @@ h1, h2, h3, h4, h5, h6, th {
 }
 
 .wrap {
-    padding-bottom: 200px;
 }
 
 .content {
+    padding-bottom: 200px;
 }
 
 .dancheong {
@@ -185,6 +185,7 @@ h1, h2, h3, h4, h5, h6, th {
 }
 
 .sponsors h4 {
+    text-align: center;
 }
 
 .sponsors ul {
