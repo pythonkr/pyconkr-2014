@@ -8,7 +8,7 @@
 {% block content %}
 <div class="speaker">
   {% if speaker.image %}
-  <img class="image" src="{{ MEDIA_URL }}{{ speaker.image }}" alt="photo of {{ speaker.slug }}">
+  <img class="image" src="{{ speaker.image.url }}" alt="photo of {{ speaker.slug }}">
   {% endif %}
   {{ object.get_badges|safe }}
   <h3>{% trans "Profile" %}</h3>

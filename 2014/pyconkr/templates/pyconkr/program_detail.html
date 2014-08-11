@@ -11,7 +11,7 @@
 <div class="speaker-small">
   <a href="{{ speaker.get_absolute_url }}">
     {% if speaker.image %}
-    <img class="image" src="{{ MEDIA_URL }}{{ speaker.image }}" alt="photo of {{ speaker.slug }}">
+    <img class="image" src="{{ speaker.image.url }}" alt="photo of {{ speaker.slug }}">
     {% endif %}
     <span class="name">{{ speaker }}</span>
   </a>

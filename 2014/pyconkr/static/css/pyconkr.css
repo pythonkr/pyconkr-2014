@@ -338,6 +338,21 @@ h1, h2, h3, h4, h5, h6, th {
     font-size: 110%;
 }
 
+.speakers img {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #E7E7E7;
+    border-radius: 100px;
+}
+
+.speakers li {
+    margin-bottom: 32px;
+}
+
+.speakers h4 .badges {
+    margin-left: 10px;
+}
+
 .clear {
     clear: both;
 }

@@ -74,9 +74,9 @@ class Speaker(models.Model):
     class Meta:
         ordering = ['name']
 
-    def get_badges(self):
+    def get_badges(self, size_class=""):
         badge = \
-            '<a class="btn btn-social btn-{}" href="{}" target="_blank">' \
+            '<a class="btn btn-social {} btn-{}" href="{}" target="_blank">' \
             '<i class="fa fa-{}"></i>{}</a>'
         fa_replacement = {
             "homepage": "home",
@@ -85,11 +85,14 @@ class Speaker(models.Model):
         result = []
         for site, url in self.info.iteritems():
             result.append(badge.format(
+                size_class,
                 site, url,
                 fa_replacement.get(site, site), site.capitalize()
             ))
-        print result
         return ' '.join(result)
+
+    def get_badges_xs(self):
+        return self.get_badges("btn-xs")
 
     def get_absolute_url(self):
         return reverse('speaker', args=[self.slug])

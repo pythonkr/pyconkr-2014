@@ -6,7 +6,7 @@
 
 {% block content %}
 <div class="sponsor">
-  <img src="{{ MEDIA_URL }}{{ object.image }}" alt="{{ object.name }}">
+  <img src="{{ object.image.url }}" alt="{{ object.name }}">
   <div>
     {{ object.desc|safe }}
   </div>

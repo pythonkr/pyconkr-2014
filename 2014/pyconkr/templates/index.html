@@ -44,8 +44,8 @@ $(function() {
 {% block content %}
 <div class="wrap">
   <h2>{% trans "Announcements" %}</h2>
-  <dl class="announcements">
   {% for announcement in recent_announcements %}
+  <dl class="announcements">
     <dt>
       <h4>
         <a href="{% url "announcement" announcement.id %}">{{ announcement }}</a>
@@ -58,7 +58,7 @@ $(function() {
         <span class="continue">{% trans "Read more" %}</span>
       </a>
     </dd>
-  {% endfor %}
   </dl>
+  {% endfor %}
 </div>
 {% endblock %}
