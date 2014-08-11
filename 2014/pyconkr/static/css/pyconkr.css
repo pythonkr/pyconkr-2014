@@ -322,6 +322,9 @@ h1, h2, h3, h4, h5, h6, th {
     .titlebar h1 {
         font-size: 36px;
     }
+    .sponsors li {
+        width: 24%;
+    }
 }
 
 @media (max-width: 480px) {
