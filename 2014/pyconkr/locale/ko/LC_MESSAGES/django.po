@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-11 07:25+0000\n"
-"PO-Revision-Date: 2014-08-11 07:37+0000\n"
+"PO-Revision-Date: 2014-08-11 08:29+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +74,7 @@ msgstr "잡페어"
 
 #: context_processors.py:31
 msgid "BOF"
-msgstr "BOF"
+msgstr "BOF 안내"
 
 #: context_processors.py:35
 msgid "Registration"
@@ -82,7 +82,7 @@ msgstr "등록 절차"
 
 #: context_processors.py:39
 msgid "Venue"
-msgstr "위치 안내"
+msgstr "행사장 안내"
 
 #: context_processors.py:43
 msgid "Contact"

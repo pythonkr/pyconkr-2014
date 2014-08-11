@@ -2,7 +2,6 @@
 {% load i18n %}
 
 {% block content %}
-<h1>{% trans "Speaker list" %}</h1>
 <ul>
   {% for obj in object_list %}
   <li><a href="{{ obj.get_absolute_url }}">{{ obj.name }}</a></li>

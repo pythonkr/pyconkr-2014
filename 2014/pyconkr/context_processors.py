@@ -6,6 +6,7 @@ from .models import SponsorLevel
 
 
 def menu(request):
+    title = None
     menu = OrderedDict([
         ('about', {
             'title': _('About'),
@@ -47,18 +48,27 @@ def menu(request):
 
     try:
         name = resolve(request.path).url_name
+
         if name in menu:
             menu[name]['active'] = True
+            title = menu[name]['title']
+        else:
+            for k, v in menu.iteritems():
+                if name in v['dropdown']:
+                    v['dropdown'][name]['active'] = True
+                    title = v['dropdown'][name]['title']
     except:
         pass
 
     return {
         'menu': menu,
+        'title': title,
     }
 
 
 def sponsors(request):
-    levels = SponsorLevel.objects.annotate(num_sponsors=Count('sponsor')).filter(num_sponsors__gt=0)
+    levels = SponsorLevel.objects.annotate(
+        num_sponsors=Count('sponsor')).filter(num_sponsors__gt=0)
 
     return {
         'levels': levels,

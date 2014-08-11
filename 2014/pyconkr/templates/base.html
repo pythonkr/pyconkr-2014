@@ -26,6 +26,7 @@
 <body>
 {% include "nav.html" %}
 {% block frontpage %}{% endblock %}
+{% block titlebar %}{% include "titlebar.html" %}{% endblock %}
 <div class="container wrap">
     {% block wrap %}
     <div class="row">
@@ -38,7 +39,6 @@
     </div>
     {% endblock %}
 </div>
-{% include "dancheong.html" %}
 {% include "footer.html" %}
 {% include "ga.html" %}
 </body>

@@ -2,8 +2,6 @@
 {% load i18n %}
 
 {% block content %}
-<h1>{% trans "Program list" %}</h1>
-
 {% for obj in object_list %}
 <a href="#{{ obj.name|slugify}}">
   <h2 id="{{ obj.name|slugify }}">
