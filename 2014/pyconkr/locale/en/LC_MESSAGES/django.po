@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-11 15:46+0000\n"
-"PO-Revision-Date: 2014-08-11 15:48+0000\n"
+"POT-Creation-Date: 2014-08-11 17:54+0000\n"
+"PO-Revision-Date: 2014-08-11 17:55+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,7 @@ msgstr "Code of Conduct"
 msgid "Conference detail"
 msgstr "Conference detail"
 
-#: context_processors.py:18 templates/index.html:46
+#: context_processors.py:18 templates/index.html:47
 msgid "Announcements"
 msgstr "Announcements"
 
@@ -114,7 +114,7 @@ msgstr "The First PyCon in Korea"
 msgid "Information of PyCon Korea"
 msgstr "Aug 30 '14 at Sookmyung Women's University"
 
-#: templates/index.html:58
+#: templates/index.html:59 templates/pyconkr/announcement_list.html:16
 msgid "Read more"
 msgstr "Read more"
 
@@ -134,17 +134,24 @@ msgstr "Schedule may be subject to change."
 msgid "Sponsor list"
 msgstr "Sponsor list"
 
-#: templates/pyconkr/program_detail.html:9
-msgid "Speaker"
-msgstr "Speaker"
+#: templates/pyconkr/announcement_detail.html:13
+msgid "Back to list"
+msgstr "Back to list"
 
-#: templates/pyconkr/program_detail.html:21
+#: templates/pyconkr/program_detail.html:35
 msgid "Description"
 msgstr "Description"
 
-#: templates/pyconkr/speaker_detail.html:14
+#: templates/pyconkr/speaker_detail.html:15
 msgid "Profile"
 msgstr "Profile"
+
+#: templates/pyconkr/speaker_detail.html:19
+msgid "Program"
+msgstr "Program"
+
+#~ msgid "Speaker"
+#~ msgstr "Speaker"
 
 #~ msgid "Speaker list"
 #~ msgstr "Speaker list"

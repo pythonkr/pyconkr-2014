@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-11 15:46+0000\n"
-"PO-Revision-Date: 2014-08-11 15:48+0000\n"
+"POT-Creation-Date: 2014-08-11 17:54+0000\n"
+"PO-Revision-Date: 2014-08-11 17:56+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr "파이콘 성명서"
 msgid "Conference detail"
 msgstr "행사 상세 정보"
 
-#: context_processors.py:18 templates/index.html:46
+#: context_processors.py:18 templates/index.html:47
 msgid "Announcements"
 msgstr "알림"
 
@@ -77,11 +77,11 @@ msgstr "BOF 안내"
 
 #: context_processors.py:36
 msgid "Registration"
-msgstr "등록 절차"
+msgstr "등록 및 현장 안내"
 
 #: context_processors.py:40
 msgid "Venue"
-msgstr "행사장 안내"
+msgstr "오시는 길"
 
 #: context_processors.py:44
 msgid "Contact"
@@ -115,7 +115,7 @@ msgstr "한국에서 열리는 첫 번째 파이콘"
 msgid "Information of PyCon Korea"
 msgstr "2014년 8월 30일, 숙명여대에서 열립니다."
 
-#: templates/index.html:58
+#: templates/index.html:59 templates/pyconkr/announcement_list.html:16
 msgid "Read more"
 msgstr "더 보기"
 
@@ -135,17 +135,24 @@ msgstr "일정은 예고 없이 변경될 수 있습니다."
 msgid "Sponsor list"
 msgstr "후원사 목록"
 
-#: templates/pyconkr/program_detail.html:9
-msgid "Speaker"
-msgstr "발표자"
+#: templates/pyconkr/announcement_detail.html:13
+msgid "Back to list"
+msgstr "목록으로"
 
-#: templates/pyconkr/program_detail.html:21
+#: templates/pyconkr/program_detail.html:35
 msgid "Description"
 msgstr "설명"
 
-#: templates/pyconkr/speaker_detail.html:14
+#: templates/pyconkr/speaker_detail.html:15
 msgid "Profile"
 msgstr "프로필"
+
+#: templates/pyconkr/speaker_detail.html:19
+msgid "Program"
+msgstr "프로그램"
+
+#~ msgid "Speaker"
+#~ msgstr "발표자"
 
 #~ msgid "Speaker list"
 #~ msgstr "발표자 목록"
