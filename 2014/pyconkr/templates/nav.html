@@ -24,8 +24,10 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <span class="glyphicon glyphicon-{{ v.icon }}"></span> {{ v.title }} <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-          {% for dk, dv in v.dropdown.items %}
-            <li><a href="/{{ k }}/{{ dk }}">{{ dv.title }}</a></li>
+          {% for sk, sv in v.dropdown.items %}
+            <li class="{% if sv.active %}active{% endif %}">
+              <a href="/{{ k }}/{{ sk }}">{{ sv.title }}</a>
+            </li>
           {% endfor %}
           </ul>
         </li>

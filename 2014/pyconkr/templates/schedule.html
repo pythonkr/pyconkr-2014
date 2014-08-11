@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block wrap %}
+<div class="content">
 {% for d, d_ in narrow.items %}
 <div class="timetable timetable-narrow visible-xs">
     <h2>{{ d }}</h2>
@@ -75,4 +76,5 @@
     </table>
 </div>
 {% endfor %}
+</div>
 {% endblock %}

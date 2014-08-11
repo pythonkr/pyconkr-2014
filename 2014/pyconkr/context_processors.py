@@ -26,7 +26,7 @@ def menu(request):
             'dropdown': OrderedDict([
                 ('cfp', {'title': _('Call for proposal')}),
                 ('schedule', {'title': _('Schedule')}),
-                ('', {'title': _('Program list')}),
+                ('list', {'title': _('Program list')}),
                 ('speakers', {'title': _('Speakers')}),
                 ('jobfair', {'title': _('Jobfair')}),
                 ('bof', {'title': _('BOF')}),
@@ -46,19 +46,20 @@ def menu(request):
         }),
     ])
 
-    try:
-        name = resolve(request.path).url_name
+    for k, v in menu.iteritems():
+        path = '/{}/'.format(k)
 
-        if name in menu:
-            menu[name]['active'] = True
-            title = menu[name]['title']
-        else:
-            for k, v in menu.iteritems():
-                if name in v['dropdown']:
-                    v['dropdown'][name]['active'] = True
-                    title = v['dropdown'][name]['title']
-    except:
-        pass
+        if request.path.startswith(path):
+            v['active'] = True
+            title = v['title']
+
+        if 'dropdown' in v:
+            for sk, sv in v['dropdown'].iteritems():
+                subpath = '{}{}'.format(path, sk)
+
+                if request.path.startswith(subpath):
+                    sv['active'] = True
+                    title = sv['title']
 
     return {
         'menu': menu,
