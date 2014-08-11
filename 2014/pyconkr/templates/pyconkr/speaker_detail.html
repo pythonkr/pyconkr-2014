@@ -15,5 +15,9 @@
   <div class="profile">
     {{ object.desc|safe }}
   </div>
+  <h3>{% trans "Program" %}</h3>
+  {% for program in object.program_set.all %}
+  <a href="{{ program.get_absolute_url }}">{{ program.name }}</a>
+  {% endfor %}
 </div>
 {% endblock %}
