@@ -74,11 +74,28 @@ class Speaker(models.Model):
     class Meta:
         ordering = ['name']
 
+    def get_badges(self):
+        badge = \
+            '<a class="btn btn-social btn-{}" href="{}" target="_blank">' \
+            '<i class="fa fa-{}"></i>{}</a>'
+        fa_replacement = {
+            "homepage": "home",
+            "blog": "pencil",
+        }
+        result = []
+        for site, url in self.info.iteritems():
+            result.append(badge.format(
+                site, url,
+                fa_replacement.get(site, site), site.capitalize()
+            ))
+        print result
+        return ' '.join(result)
+
     def get_absolute_url(self):
         return reverse('speaker', args=[self.slug])
 
     def __unicode__(self):
-        return '%s(%s)' % (self.name, self.slug)
+        return '%s (%s)' % (self.name, self.slug)
 
 
 class Program(models.Model):

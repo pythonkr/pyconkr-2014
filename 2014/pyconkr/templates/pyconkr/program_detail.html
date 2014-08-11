@@ -1,9 +1,23 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block titlebar %}
 {% include "titlebar.html" with title=object.name %}
 {% endblock %}
 
 {% block content %}
+<h3>{% trans "Speaker" %}</h3>
+{% for speaker in object.speakers.all %}
+<div class="speaker-small">
+  <a href="{{ speaker.get_absolute_url }}">
+    {% if speaker.image %}
+    <img class="image" src="{{ MEDIA_URL }}{{ speaker.image }}" alt="photo of {{ speaker.slug }}">
+    {% endif %}
+    <span class="name">{{ speaker }}</span>
+  </a>
+</div>
+{% endfor %}
+
+<h3>{% trans "Description" %}</h3>
 {{ object.desc|safe }}
 {% endblock %}

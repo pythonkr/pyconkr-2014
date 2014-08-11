@@ -140,6 +140,7 @@ h1, h2, h3, h4, h5, h6, th {
 }
 
 .dancheong td {
+    color: transparent;
     font-size: 1px;
     line-height: 4px;
 }
@@ -288,8 +289,53 @@ h1, h2, h3, h4, h5, h6, th {
     margin-bottom: 32px;
 }
 
+.speaker .image {
+    display: block;
+    width: 320px;
+    margin: 10px 0;
+    height: auto;
+    border: 1px solid #E7E7E7;
+    border-radius: 10px;
+}
+
+.btn-homepage {
+    color: #FFF;
+    background-color: #818181;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-homepage:hover, .btn-homepage:focus {
+    color: #FFF;
+    background-color: #696969;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-blog {
+    color: #FFF !important;
+    background-color: #57C791;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-blog:hover, .btn-blog:focus
+{
+    color: #FFF;
+    background-color: #4BB482;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.speaker-small .image {
+    width: 100px;
+    height: auto;
+    border: 1px solid #E7E7E7;
+    border-radius: 100px;
+}
+
 .timetable .title {
     font-size: 110%;
+}
+
+.clear {
+    clear: both;
 }
 
 .footer {

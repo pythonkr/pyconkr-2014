@@ -1,9 +1,19 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block titlebar %}
-{% include "titlebar.html" with title=object.name %}
+{% include "titlebar.html" with title=object %}
 {% endblock %}
 
 {% block content %}
-{{ object.desc|safe }}
+<div class="speaker">
+  {% if speaker.image %}
+  <img class="image" src="{{ MEDIA_URL }}{{ speaker.image }}" alt="photo of {{ speaker.slug }}">
+  {% endif %}
+  {{ object.get_badges|safe }}
+  <h3>{% trans "Profile" %}</h3>
+  <div class="profile">
+    {{ object.desc|safe }}
+  </div>
+</div>
 {% endblock %}

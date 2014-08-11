@@ -8,6 +8,7 @@
     "datetimepicker": "~2.2.4",
     "bootstrap": "~3.1.1",
     "font-awesome": "~4.1.0",
-    "select2": "~3.4.6"
+    "select2": "~3.4.6",
+    "bootstrap-social": "~4.6.0"
   }
 }
