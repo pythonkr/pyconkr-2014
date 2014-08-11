@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-11 06:07+0000\n"
-"PO-Revision-Date: 2014-08-11 06:08+0000\n"
+"POT-Creation-Date: 2014-08-11 07:25+0000\n"
+"PO-Revision-Date: 2014-08-11 07:25+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -89,12 +89,12 @@ msgid "Contact"
 msgstr "연락처"
 
 #: settings.py:87
-msgid "English"
-msgstr "영어"
-
-#: settings.py:88
 msgid "Korean"
 msgstr "한국어"
+
+#: settings.py:88
+msgid "English"
+msgstr "영어"
 
 #: templates/base.html:7
 msgid "Pycon Korea 2014"
@@ -119,6 +119,10 @@ msgstr "2014년 8월 30일, 숙명여대에서 열립니다."
 #: templates/nav.html:8
 msgid "Toggle navigation"
 msgstr "툴바 토글"
+
+#: templates/nav.html:41
+msgid "Language"
+msgstr "언어 선택"
 
 #: templates/sponsors.html:2
 msgid "Sponsor list"
