@@ -5,10 +5,11 @@
 {% block head %}
 <script>
 $(function() {
-    $('.background').animate({top:0, opacity:0.1}, {duration:2500});
+    var $background = $('.background');
+    $background.animate({top:0, opacity:0.1}, {duration:2500});
     $(window).scroll(function() {
         var top = $(document).scrollTop();
-        $('.background').offset({top:70+top/3});
+        $background.stop().offset({top:70+top/3}).css({opacity:0.1});
     });
 });
 </script>
