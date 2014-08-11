@@ -67,6 +67,7 @@ class Sponsor(models.Model):
 class Speaker(models.Model):
     slug = models.SlugField(max_length=100, db_index=True)
     name = models.CharField(max_length=100, db_index=True)
+    email = models.EmailField(max_length=255, null=True, blank=True)
     image = models.ImageField(upload_to='speaker', null=True, blank=True)
     desc = models.TextField(null=True, blank=True)
     info = JSONField()

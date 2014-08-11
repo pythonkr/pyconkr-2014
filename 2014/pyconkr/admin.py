@@ -48,9 +48,10 @@ admin.site.register(SponsorLevel, SponsorLevelAdmin)
 
 
 class SpeakerAdmin(SummernoteModelAdmin):
-    list_display = ('id', 'slug', 'name',)
+    list_display = ('id', 'slug', 'name', 'email',)
+    list_editable = ('slug', 'name', 'email',)
     ordering = ('name',)
-    search_fields = ('name', 'slug',)
+    search_fields = ('name', 'slug', 'email',)
 admin.site.register(Speaker, SpeakerAdmin)
 
 
