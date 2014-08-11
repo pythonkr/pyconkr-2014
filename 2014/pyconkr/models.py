@@ -1,4 +1,5 @@
 from django.core.urlresolvers import reverse
+from django.template.defaultfilters import date as _date
 from django.db import models
 from jsonfield import JSONField
 
@@ -19,7 +20,7 @@ class ProgramDate(models.Model):
     day = models.DateField()
 
     def __unicode__(self):
-        return self.day.strftime("%m/%d (%a)")
+        return _date(self.day, "Y-m-d (D)")
 
 
 class ProgramTime(models.Model):

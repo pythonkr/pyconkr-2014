@@ -272,6 +272,22 @@ h1, h2, h3, h4, h5, h6, th {
     padding: 0;
 }
 
+.announcements dt h4 {
+    font-size: 140%;
+}
+
+.announcements dt h4 a {
+    display: block;
+}
+
+.announcements dt h4 span {
+    font-size: 60%;
+}
+
+.announcements dd {
+    margin-bottom: 32px;
+}
+
 .timetable .title {
     font-size: 110%;
 }
