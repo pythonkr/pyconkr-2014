@@ -49,15 +49,15 @@ def menu(request):
     for k, v in menu.iteritems():
         path = '/{}/'.format(k)
 
-        if request.path.startswith(path):
+        if request.path.endswith(path):
             v['active'] = True
             title = v['title']
 
         if 'dropdown' in v:
             for sk, sv in v['dropdown'].iteritems():
-                subpath = '{}{}'.format(path, sk)
+                subpath = '{}{}/'.format(path, sk)
 
-                if request.path.startswith(subpath):
+                if request.path.endswith(subpath):
                     sv['active'] = True
                     title = sv['title']
 
