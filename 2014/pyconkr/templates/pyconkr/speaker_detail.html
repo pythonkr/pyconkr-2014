@@ -2,11 +2,11 @@
 {% load i18n %}
 
 {% block og-title %}{{ speaker.name }}{% endblock %}
-{% block og-image %}{{ speaker.image.url }}{% endblock %}
+{% block og-image %}{% if speaker.image %}{{ speaker.image.url }}{% else %}{{ block.super }}{% endif %}{% endblock %}
 {% block og-desc %}{{ speaker.desc|striptags }}{% endblock %}
 
 {% block titlebar %}
-{% include "titlebar.html" with title=object %}
+{% include "titlebar.html" with title=speaker %}
 {% endblock %}
 
 {% block content %}
@@ -15,13 +15,13 @@
   {% if speaker.image %}
   <img class="image" src="{{ speaker.image.url }}" alt="photo of {{ speaker.slug }}">
   {% endif %}
-  {{ object.get_badges|safe }}
+  {{ speaker.get_badges|safe }}
   <h3>{% trans "Profile" %}</h3>
   <div class="profile">
-    {{ object.desc|safe }}
+    {{ speaker.desc|safe }}
   </div>
   <h3>{% trans "Program" %}</h3>
-  {% for program in object.program_set.all %}
+  {% for program in speaker.program_set.all %}
   <a href="{{ program.get_absolute_url }}">{{ program.name }}</a>
   {% endfor %}
 </div>
