@@ -86,6 +86,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     max-width: 100%;
 }
 
+.content .map {
+    max-width: 100%;
+    border: 1px solid #E7E7E7;
+    border-radius: 10px;
+}
+
 .titlebar {
     position: relative;
     background-color: #FAFAFA;
@@ -336,7 +342,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 .list-group-item {
-    font-size: 125%;
+    font-size: 110%;
+}
+
+.list-group-item span {
+    margin-right: 8px;
 }
 
 .speaker-small {
@@ -401,17 +411,18 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 .badges {
-    position: relative;
-    width: 100%;
+    display: inline-block;
 }
 
-.fb_iframe_widget {
-    position: relative;
-    line-height: 100%;
-    top: -2px;
+.badges span {
+    float: left;
 }
 
 @media (max-width: 992px) {
+    .titlebar .building {
+        display: none;
+    }
+
     .navbar-nav>li>a {
         padding: 10px;
     }
@@ -430,7 +441,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 @media (max-width: 480px) {
-    .frontpage .courtesy, .building, .titlebar .background {
+    .frontpage .slogan img,
+    .frontpage .courtesy,
+    .building {
         display: none;
     }
 
