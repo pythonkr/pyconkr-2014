@@ -15,13 +15,13 @@
                 <th nowrap rowspan="{{ t_.items|length }}">{{ t.begin|date:"H:i" }}</th>
                 {% for r, s in t_.items|slice:"1" %}
                 <td nowrap>{{ s.room }}</td>
-                <td><a href="{{ s.get_absolute_url }}">{{ s }}</a></td>
+                <td><a href="{{ s.get_absolute_url }}">{{ s }}</a><sup>{{ s.get_language_display }}</sup></td>
                 {% endfor %}
             </tr>
             {% for r, s in t_.items|slice:"1:" %}
             <tr>
                 <td nowrap>{{ s.room }}</td>
-                <td><a href="{{ s.get_absolute_url }}">{{ s }}</a></td>
+                <td><a href="{{ s.get_absolute_url }}">{{ s }}</a><sup>{{ s.get_language_display }}</sup></td>
             </tr>
             {% endfor %}
             {% endfor %}
@@ -57,7 +57,7 @@
                     onclick="document.location='{{ s.get_absolute_url }}'">
                     <div class="program">
                         <a href="{{ s.get_absolute_url }}">
-                            <div class="title">{{ s.name }}</div>
+                            <div class="title">{{ s.name }}</div><sup>{{ s.get_language_display }}</sup>
                         </a>
                     </div>
                     {% if s.speakers %}
