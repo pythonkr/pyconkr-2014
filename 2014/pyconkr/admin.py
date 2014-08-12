@@ -40,8 +40,8 @@ admin.site.register(Sponsor, SponsorAdmin)
 
 
 class SponsorLevelAdmin(SummernoteModelAdmin):
-    list_display = ('id', 'order', 'name',)
-    list_editable = ('name', 'order',)
+    list_display = ('id', 'order', 'name', 'slug',)
+    list_editable = ('order', 'name', 'slug',)
     ordering = ('order',)
     search_fields = ('name',)
 admin.site.register(SponsorLevel, SponsorLevelAdmin)

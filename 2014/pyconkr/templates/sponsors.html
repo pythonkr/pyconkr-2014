@@ -6,9 +6,9 @@
 <h4>{{ lvl.name }}</h4>
 <ul>
   {% for sponsor in lvl.sponsor_set.all %}
-  <li>
+  <li class="sponsor-{{ lvl.slug }}">
     <a href="{% url "sponsor" sponsor.slug %}">
-      <img class="logo" src="{{ MEDIA_URL }}{{ sponsor.image }}" alt="{{ sponsor }}">
+      <img src="{{ MEDIA_URL }}{{ sponsor.image }}" alt="{{ sponsor }}">
     </a>
   </li>
   {% endfor %}

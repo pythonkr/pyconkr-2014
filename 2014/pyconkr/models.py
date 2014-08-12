@@ -29,7 +29,7 @@ class ProgramTime(models.Model):
     end = models.TimeField()
 
     def __unicode__(self):
-        return '%s - %s' % (self.begin, self.end)
+        return '%s - %s / %s' % (self.begin, self.end, self.name)
 
 
 class ProgramCategory(models.Model):
@@ -42,6 +42,7 @@ class ProgramCategory(models.Model):
 
 class SponsorLevel(models.Model):
     name = models.CharField(max_length=100, db_index=True)
+    slug = models.SlugField(max_length=100)
     desc = models.TextField(null=True, blank=True)
     order = models.IntegerField(default=1)
 
