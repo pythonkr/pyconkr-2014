@@ -159,7 +159,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 .dancheong td {
     color: transparent;
-    font-size: 1px;
+    font-size: 0;
     line-height: 4px;
 }
 

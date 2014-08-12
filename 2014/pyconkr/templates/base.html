@@ -17,8 +17,6 @@
   <meta property="og:description" content="{% block og-desc %}파이콘은 오픈소스 프로그래밍 언어인 파이썬 사용자들을 위한 행사입니다. 올해 한국에서 처음으로 열리는 파이콘 한국 2014 는 개발자들의 지식과 경험을 공유하여 한국 개발자 커뮤니티와 파이썬의 활성화에 기여하고자 합니다.{% endblock %}">
 
   <!-- Include basic items -->
-  <script src="{% static "components/jquery/dist/jquery.min.js" %}"></script>
-  <script src="{% static "components/bootstrap/dist/js/bootstrap.min.js" %}"></script>
   <link href="{% static "components/bootstrap/dist/css/bootstrap.min.css" %}" rel="stylesheet">
   <link href="{% static "components/bootstrap-social/bootstrap-social.css" %}" rel="stylesheet">
   <link href="{% static "components/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet">
@@ -29,10 +27,16 @@
   <!-- Google fonts -->
   <link href='//fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css'>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="{% static "image/favicon.ico" %}" type="image/x-icon">
   <link rel="icon" href="{% static "image/favicon.ico" %}" type="image/x-icon">
+
+  <!-- Scripts -->
+  <script src="{% static "components/html5shiv/dist/html5shiv.min.js" %}"></script>
+  <script src="{% static "components/jquery/dist/jquery.min.js" %}"></script>
+  <script src="{% static "components/bootstrap/dist/js/bootstrap.min.js" %}"></script>
   {% block head %}{% endblock %}
 </head>
 
