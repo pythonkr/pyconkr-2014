@@ -11,7 +11,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.views.decorators.cache import never_cache
 from django.views.generic import ListView, DetailView, UpdateView
 from datetime import datetime, timedelta
-from .forms import EmailLoginForm, SpeakerForm
+from .forms import EmailLoginForm, SpeakerForm, ProgramForm
 from .helper import sendEmailToken
 from .models import (Room,
                      Program, ProgramDate, ProgramTime, ProgramCategory,
@@ -97,12 +97,6 @@ class SpeakerUpdate(UpdateView):
         queryset = super(SpeakerUpdate, self).get_queryset()
         return queryset.filter(email=self.request.user.email)
 
-    def form_valid(self, form):
-        # Put data into jsonfield
-#        for k, v in self.model.descfields().iteritems():
-#            form.instance.desc[k] = self.request.POST.get(k)
-        return super(SpeakerUpdate, self).form_valid(form)
-
 
 class ProgramList(ListView):
     model = ProgramCategory
@@ -111,6 +105,25 @@ class ProgramList(ListView):
 
 class ProgramDetail(DetailView):
     model = Program
+
+    def get_context_data(self, **kwargs):
+        context = super(ProgramDetail, self).get_context_data(**kwargs)
+
+        if self.request.user.is_authenticated():
+            for speaker in self.object.speakers.all():
+                if self.request.user.email == speaker.email:
+                    context['editable'] = True
+
+        return context
+
+
+class ProgramUpdate(UpdateView):
+    model = Program
+    form_class = ProgramForm
+
+    def get_queryset(self):
+        queryset = super(ProgramUpdate, self).get_queryset()
+        return queryset.filter(speakers__email=self.request.user.email)
 
 
 class JobfairList(ListView):

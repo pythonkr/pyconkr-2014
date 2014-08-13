@@ -3,7 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 from django_summernote.widgets import SummernoteInplaceWidget
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
-from .models import Speaker
+from .models import Speaker, Program
 
 
 class EmailLoginForm(forms.Form):
@@ -36,4 +36,21 @@ class SpeakerForm(forms.ModelForm):
         labels = {
             'desc': _('Profile'),
             'info': _('Additional information'),
+        }
+
+
+class ProgramForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(ProgramForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.add_input(Submit('submit', _('Submit')))
+
+    class Meta:
+        model = Program
+        fields = ('desc', )
+        widgets = {
+            'desc': SummernoteInplaceWidget(),
+        }
+        labels = {
+            'desc': _('Description'),
         }

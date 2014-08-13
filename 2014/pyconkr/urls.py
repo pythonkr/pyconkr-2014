@@ -7,7 +7,7 @@ from .views import RoomDetail, JobfairList
 from .views import AnnouncementList, AnnouncementDetail
 from .views import SpeakerList, SpeakerDetail, SpeakerUpdate
 from .views import SponsorList, SponsorDetail
-from .views import ProgramList, ProgramDetail
+from .views import ProgramList, ProgramDetail, ProgramUpdate
 from .views import login, login_req, login_mailsent, logout
 
 from django.contrib import admin
@@ -31,6 +31,8 @@ urlpatterns = patterns(
         ProgramList.as_view(), name='programs'),
     url(r'^program/(?P<pk>\d+)$',
         ProgramDetail.as_view(), name='program'),
+    url(r'^program/(?P<pk>\d+)/edit$',
+        ProgramUpdate.as_view(), name='program_edit'),
     url(r'^programs/speakers/$',
         SpeakerList.as_view(), name='speakers'),
     url(r'^programs/speaker/(?P<slug>\w+)$',
