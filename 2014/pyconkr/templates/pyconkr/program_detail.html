@@ -11,9 +11,11 @@
 {% block content %}
 {% include "badge/all.html" %}
 <ul class="list-group">
+  {% if program.category %}
   <li class="list-group-item">
     <span class="glyphicon glyphicon-tag"></span> {{ program.category }}
   </li>
+  {% endif %}
   <li class="list-group-item">
     <span class="glyphicon glyphicon-time"></span> {{ program.date }} {{ program.get_times }}
   </li>
@@ -25,6 +27,7 @@
     <span class="glyphicon glyphicon-map-marker"></span> {{ program.room }}
   </li>
   {% endif %}
+  {% if program.get_speakers %}
   <li class="list-group-item">
     {% for speaker in program.speakers.all %}
     <div class="speaker-small">
@@ -35,6 +38,7 @@
     </div>
     {% endfor %}
   </li>
+  {% endif %}
 </ul>
 <h3>{% trans "Description" %}</h3>
 {{ program.desc|safe }}
