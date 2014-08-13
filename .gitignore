@@ -10,4 +10,4 @@ media/
 collected_static/
 django-summernote/
 **/static/components/**
-settings_prod.py
+settings_*.py
