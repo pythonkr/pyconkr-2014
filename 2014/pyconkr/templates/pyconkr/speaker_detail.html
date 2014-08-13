@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% block og-title %}{{ speaker.name }}{% endblock %}
-{% block og-image %}{% if speaker.image %}{{ speaker.image.url }}{% else %}{{ block.super }}{% endif %}{% endblock %}
+{% block og-image %}{{ speaker.get_image_url }}{% endblock %}
 {% block og-desc %}{{ speaker.desc|striptags }}{% endblock %}
 
 {% block titlebar %}
@@ -12,9 +12,7 @@
 {% block content %}
 {% include "badge/all.html" %}
 <div class="speaker">
-  {% if speaker.image %}
-  <img class="image" src="{{ speaker.image.url }}" alt="photo of {{ speaker.slug }}">
-  {% endif %}
+  <img class="image" src="{{ speaker.get_image_url }}" alt="photo of {{ speaker.slug }}">
   {{ speaker.get_badges|safe }}
   <h3>{% trans "Profile" %}</h3>
   <div class="profile">

@@ -4,22 +4,18 @@
 
 {% block content %}
 <ul class="speakers media-list">
-{% for obj in object_list %}
+{% for speaker in object_list %}
   <li class="media">
-    <a class="pull-left" href="{{ obj.get_absolute_url }}">
-      {% if obj.image %}
-      <img class="media-object" src="{{ obj.image.url }}" alt="{{ obj.name }}">
-      {% else %}
-      <img class="media-object" src="{% static "image/anonymous.png" %}" alt="Image not ready">
-      {% endif %}
+    <a class="pull-left" href="{{ speaker.get_absolute_url }}">
+      <img class="media-speakerect" src="{{ speaker.get_image_url }}" alt="photo of {{ speaker.name }}">
     </a>
     <div class="media-body">
       <h4 class="media-heading">
-        <a href="{{ obj.get_absolute_url }}">{{ obj.name }} / {{ obj.slug }}</a>
-        <span class="badges hidden-xs">{{ obj.get_badges_xs|safe }}</span>
+        <a href="{{ speaker.get_absolute_url }}">{{ speaker.name }} / {{ speaker.slug }}</a>
+        <span class="badges hidden-xs">{{ speaker.get_badges_xs|safe }}</span>
       </h4>
-      <!--{{ obj.desc|striptags|truncatechars:200|safe }}-->
-      {% for program in obj.program_set.all %}
+      <!--{{ speaker.desc|striptags|truncatechars:200|safe }}-->
+      {% for program in speaker.program_set.all %}
       <a href="{{ program.get_absolute_url }}">{{ program.name }}</a>
       {% endfor %}
     </div>

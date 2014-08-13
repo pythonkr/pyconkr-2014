@@ -1,7 +1,7 @@
 from django.conf import settings
+from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.core.urlresolvers import reverse
 from django.template.defaultfilters import date as _date
-from django.utils.translation import ugettext_lazy as _
 from django.db import models
 from jsonfield import JSONField
 
@@ -100,6 +100,12 @@ class Speaker(models.Model):
 
     def get_absolute_url(self):
         return reverse('speaker', args=[self.slug])
+
+    def get_image_url(self):
+        if self.image:
+            return self.image.url
+
+        return static('image/anonymous.png')
 
     def __unicode__(self):
         return '%s (%s)' % (self.name, self.slug)

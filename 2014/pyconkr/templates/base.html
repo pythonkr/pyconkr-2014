@@ -23,6 +23,9 @@
 
   <!-- Override bootstrap css -->
   <link href="{% static "css/pyconkr.css" %}" rel="stylesheet">
+  <!--[if !IE]><!-->
+  <link href="{% static "css/pyconkr-media.css" %}" rel="stylesheet">
+  <!--<![endif]-->
 
   <!-- Google fonts -->
   <link href='//fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
@@ -34,8 +37,8 @@
   <link rel="icon" href="{% static "image/favicon.ico" %}" type="image/x-icon">
 
   <!-- Scripts -->
+  <script src="{% static "components/jquery/jquery.min.js" %}"></script>
   <script src="{% static "components/html5shiv/dist/html5shiv.min.js" %}"></script>
-  <script src="{% static "components/jquery/dist/jquery.min.js" %}"></script>
   <script src="{% static "components/bootstrap/dist/js/bootstrap.min.js" %}"></script>
   {% block head %}{% endblock %}
 </head>

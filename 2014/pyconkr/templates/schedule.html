@@ -15,13 +15,13 @@
                 <th nowrap rowspan="{{ t_.items|length }}">{{ t.begin|date:"H:i" }}</th>
                 {% for r, s in t_.items|slice:"1" %}
                 <td nowrap>{{ s.room }}</td>
-                <td><a href="{{ s.get_absolute_url }}">{{ s }}</a><sup>{{ s.get_language_display }}</sup></td>
+                <td><a href="{{ s.get_absolute_url }}">{{ s }}</a></td>
                 {% endfor %}
             </tr>
             {% for r, s in t_.items|slice:"1:" %}
             <tr>
                 <td nowrap>{{ s.room }}</td>
-                <td><a href="{{ s.get_absolute_url }}">{{ s }}</a><sup>{{ s.get_language_display }}</sup></td>
+                <td><a href="{{ s.get_absolute_url }}">{{ s }}</a></td>
             </tr>
             {% endfor %}
             {% endfor %}
@@ -57,13 +57,16 @@
                     onclick="document.location='{{ s.get_absolute_url }}'">
                     <div class="program">
                         <a href="{{ s.get_absolute_url }}">
-                            <div class="title">{{ s.name }}</div><sup>{{ s.get_language_display }}</sup>
+                            <div class="title">{{ s.name }}</div>
                         </a>
                     </div>
                     {% if s.speakers %}
                     <div class="speaker">
                         {% for speaker in s.speakers.all %}
-                        <a href="{{ speaker.get_absolute_url }}">{{ speaker.name }}</a>
+                        <a href="{{ speaker.get_absolute_url }}">
+                            <img src="{{ speaker.get_image_url }}" alt="photo of {{ speaker.slug }}">
+                            {{ speaker.name }}
+                        </a>
                         {% if not forloop.last %}, {% endif %}
                         {% endfor %}
                     </div>

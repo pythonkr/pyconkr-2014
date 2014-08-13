@@ -373,6 +373,17 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     font-size: 110%;
 }
 
+.timetable .speaker {
+    margin-top: 12px;
+}
+
+.timetable .speaker img {
+    width: 36px;
+    height: auto;
+    border: 1px solid #E7E7E7;
+    border-radius: 100px;
+}
+
 .jobfair dt img {
     width: auto;
     height: 64px;
@@ -427,56 +438,4 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 .badges span {
     float: left;
-}
-
-@media (max-width: 992px) {
-    .titlebar .building {
-        display: none;
-    }
-
-    .navbar-nav>li>a {
-        padding: 10px;
-    }
-
-    .titlebar {
-        padding: 8px 0 16px 0;
-        margin-bottom: 8px;
-    }
-
-    .titlebar h1 {
-        font-size: 36px;
-    }
-    .sponsors li {
-        width: 24%;
-    }
-}
-
-@media (max-width: 480px) {
-    .frontpage .slogan img,
-    .frontpage .courtesy,
-    .building {
-        display: none;
-    }
-
-    .footer .pyconkr-badge {
-        width: 64px;
-    }
-
-    .titlebar {
-        padding: 4px 0 8px 0;
-        margin-bottom: 4px;
-    }
-
-    .titlebar h1 {
-        font-size: 28px;
-    }
-
-    .well {
-        margin: 14px -12px;
-    }
-
-    .jobfair dt img {
-        width: auto;
-        height: 32px;
-    }
 }
