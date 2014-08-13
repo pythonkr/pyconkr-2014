@@ -4,12 +4,13 @@ from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect
 from django.utils.http import is_safe_url
 from django.utils.translation import check_for_language
 from django.utils.translation import ugettext_lazy as _
 from django.views.decorators.cache import never_cache
 from django.views.generic import ListView, DetailView
+from datetime import datetime, timedelta
 from .forms import EmailLoginForm
 from .helper import sendEmailToken
 from .models import (Room,
@@ -145,7 +146,14 @@ def login(request):
 
 @never_cache
 def login_req(request, token):
-    token = get_object_or_404(EmailToken, token=token)
+    time_threshold = datetime.now() - timedelta(hours=1)
+
+    try:
+        token = EmailToken.objects.get(token=token,
+                                       created__gte=time_threshold)
+    except ObjectDoesNotExist:
+        return render(request, 'login_notvalidtoken.html',
+                      {'title': _('Not valid token')})
     email = token.email
 
     # Create user automatically by email as id, token as password
