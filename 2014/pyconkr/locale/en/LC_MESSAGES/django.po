@@ -2,20 +2,20 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-13 07:12+0000\n"
-"PO-Revision-Date: 2014-08-11 17:55+0000\n"
+"POT-Creation-Date: 2014-08-13 12:08+0000\n"
+"PO-Revision-Date: 2014-08-13 12:13+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "X-Translated-Using: django-rosetta 0.7.4\n"
 
 #: context_processors.py:12
@@ -94,6 +94,22 @@ msgstr "Korean"
 msgid "English"
 msgstr "English"
 
+#: settings.py:131
+msgid "PyCon Korea 2014 one-time login token"
+msgstr "PyCon Korea 2014 one-time login token"
+
+#: settings.py:132 templates/mail/token_html.html:2
+msgid "PyCon Korea"
+msgstr "Pycon Korea"
+
+#: views.py:141 templates/nav.html:53
+msgid "Login"
+msgstr "Login"
+
+#: views.py:168
+msgid "Mail sent"
+msgstr "Mail sent"
+
 #: templates/base.html:7
 msgid "Pycon Korea 2014"
 msgstr "Pycon Korea 2014"
@@ -118,11 +134,45 @@ msgstr "Aug 30 '14 at Sookmyung Women's University"
 msgid "Read more"
 msgstr "Read more"
 
+#: templates/login.html:5
+msgid "Login via mail"
+msgstr "Login via mail"
+
+#: templates/login.html:20
+msgid ""
+"We store your mail address only. Never store password or any personal "
+"information."
+msgstr ""
+"We store your mail address only. Never store password or any personal "
+"information."
+
+#: templates/login_mailsent.html:5
+msgid ""
+"One-time login token url was sent to your mail. Please check your mailbox."
+msgstr ""
+"One-time login token url was sent to your mail. Please check your mailbox."
+
+#: templates/login_mailsent.html:6
+msgid "Login token valid for only 1 hour."
+msgstr "Login token valid for only 1 hour."
+
+#: templates/login_mailsent.html:6
+msgid "If you lost token mail or be lated, please login again."
+msgstr "If you lost token mail or be lated, please login again."
+
+#: templates/login_mailsent.html:7
+msgid "Back to home"
+msgstr "Back to home"
+
 #: templates/nav.html:8
 msgid "Toggle navigation"
 msgstr "Toggle navigation"
 
-#: templates/nav.html:43
+#: templates/nav.html:48
+msgid "Logout"
+msgstr "Logout"
+
+#: templates/nav.html:58
 msgid "Language"
 msgstr "Language"
 
@@ -134,21 +184,32 @@ msgstr "Schedule may be subject to change."
 msgid "Sponsor list"
 msgstr "Sponsor list"
 
+#: templates/mail/token_html.html:3 templates/mail/token_text.html:2
+msgid "You can login to PyCon Korea homepage via below url."
+msgstr "You can login to PyCon Korea homepage via below url."
+
+#: templates/mail/token_html.html:4
+msgid "Link"
+msgstr "Link"
+
 #: templates/pyconkr/announcement_detail.html:13
 msgid "Back to list"
 msgstr "Back to list"
 
-#: templates/pyconkr/program_detail.html:41
+#: templates/pyconkr/program_detail.html:43
 msgid "Description"
 msgstr "Description"
 
-#: templates/pyconkr/speaker_detail.html:19
+#: templates/pyconkr/speaker_detail.html:17
 msgid "Profile"
 msgstr "Profile"
 
-#: templates/pyconkr/speaker_detail.html:23
+#: templates/pyconkr/speaker_detail.html:21
 msgid "Program"
 msgstr "Program"
+
+#~ msgid "PyCon Korea <foo@bar.com>"
+#~ msgstr "Pycon Korea 2014"
 
 #~ msgid "Speaker"
 #~ msgstr "Speaker"

@@ -3,7 +3,7 @@ from django.contrib.flatpages.models import FlatPage
 from django_summernote.admin import SummernoteModelAdmin
 from .models import (Room, Program, ProgramTime, ProgramDate, ProgramCategory,
                      Speaker, Sponsor, SponsorLevel,
-                     Announcement, Jobfair)
+                     Announcement, Jobfair, EmailToken)
 
 
 class RoomAdmin(SummernoteModelAdmin):
@@ -77,6 +77,12 @@ class JobfairAdmin(SummernoteModelAdmin):
     ordering = ('id',)
     search_fields = ('name', 'sponsor__name')
 admin.site.register(Jobfair, JobfairAdmin)
+
+
+class EmailTokenAdmin(admin.ModelAdmin):
+    list_display = ('email', 'token', 'created')
+    search_fields = ('email',)
+admin.site.register(EmailToken, EmailTokenAdmin)
 
 
 class FlatPageAdmin(SummernoteModelAdmin):

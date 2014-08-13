@@ -4,6 +4,7 @@ from django.core.urlresolvers import reverse
 from django.template.defaultfilters import date as _date
 from django.db import models
 from jsonfield import JSONField
+from uuid import uuid4
 
 
 class Room(models.Model):
@@ -116,7 +117,9 @@ class Program(models.Model):
     desc = models.TextField(null=True, blank=True)
     slide_url = models.CharField(max_length=255, null=True, blank=True)
     speakers = models.ManyToManyField(Speaker, blank=True)
-    language = models.CharField(max_length=2, choices=settings.LANGUAGES, default='ko')
+    language = models.CharField(max_length=2,
+                                choices=settings.LANGUAGES,
+                                default='ko')
 
     date = models.ForeignKey(ProgramDate)
     rooms = models.ManyToManyField(Room, null=True, blank=True)
@@ -172,3 +175,13 @@ class Jobfair(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+class EmailToken(models.Model):
+    email = models.EmailField(max_length=255)
+    token = models.CharField(max_length=64, unique=True)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def save(self, *args, **kwargs):
+        self.token = str(uuid4())
+        super(EmailToken, self).save(*args, **kwargs)

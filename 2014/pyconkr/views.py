@@ -1,12 +1,21 @@
 from django.conf import settings
+from django.contrib.auth import login as user_login, logout as user_logout
+from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
+from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.utils.http import is_safe_url
 from django.utils.translation import check_for_language
+from django.utils.translation import ugettext_lazy as _
+from django.views.decorators.cache import never_cache
 from django.views.generic import ListView, DetailView
+from .forms import EmailLoginForm
+from .helper import sendEmailToken
 from .models import (Room,
                      Program, ProgramDate, ProgramTime, ProgramCategory,
-                     Speaker, Sponsor, Jobfair, Announcement)
+                     Speaker, Sponsor, Jobfair, Announcement,
+                     EmailToken)
 
 
 def index(request):
@@ -109,3 +118,59 @@ def setlang(request, lang_code):
 
 def robots(request):
     return render(request, 'robots.txt', content_type='text/plain')
+
+
+def login(request):
+    form = EmailLoginForm()
+
+    if request.method == 'POST':
+        form = EmailLoginForm(request.POST)
+        if form.is_valid():
+            # Remove previous tokens
+            email = form.cleaned_data['email']
+            EmailToken.objects.filter(email=email).delete()
+
+            # Create new
+            token = EmailToken(email=email)
+            token.save()
+
+            sendEmailToken(request, token)
+            return redirect(reverse('login_mailsent'))
+
+    return render(request, 'login.html', {
+        'form': form,
+        'title': _('Login'),
+    })
+
+
+@never_cache
+def login_req(request, token):
+    token = get_object_or_404(EmailToken, token=token)
+    email = token.email
+
+    # Create user automatically by email as id, token as password
+    try:
+        user = User.objects.get(email=email)
+    except ObjectDoesNotExist:
+        user = User.objects.create_user(email, email, token)
+        user.save()
+
+    token.delete()
+
+    # Set backend manually
+    user.backend = 'django.contrib.auth.backends.ModelBackend'
+    user_login(request, user)
+
+    return redirect(reverse('index'))
+
+
+@never_cache
+def login_mailsent(request):
+    return render(request, 'login_mailsent.html', {
+        'title': _('Mail sent'),
+    })
+
+
+def logout(request):
+    user_logout(request)
+    return redirect(reverse('index'))

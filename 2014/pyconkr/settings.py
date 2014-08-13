@@ -127,3 +127,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 DOMAIN = 'http://dev.pycon.kr/2014'
+
+EMAIL_LOGIN_TITLE = _("PyCon Korea 2014 one-time login token")
+EMAIL_SENDER = _("PyCon Korea") + "<foo@bar.com>"

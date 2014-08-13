@@ -8,6 +8,7 @@ from .views import AnnouncementList, AnnouncementDetail
 from .views import SpeakerList, SpeakerDetail
 from .views import SponsorList, SponsorDetail
 from .views import ProgramList, ProgramDetail
+from .views import login, login_req, login_mailsent, logout
 
 from django.contrib import admin
 admin.autodiscover()
@@ -15,17 +16,34 @@ admin.autodiscover()
 urlpatterns = patterns(
     '',
     url(r'^$', index, name='index'),
-    url(r'^room/(?P<pk>\d+)$', RoomDetail.as_view(), name='room'),
-    url(r'^about/announcements/$', AnnouncementList.as_view(), name='announcements'),
-    url(r'^about/announcement/(?P<pk>\d+)$', AnnouncementDetail.as_view(), name='announcement'),
-    url(r'^about/sponsors/$', SponsorList.as_view(), name='sponsors'),
-    url(r'^about/sponsor/(?P<slug>\w+)$', SponsorDetail.as_view(), name='sponsor'),
-    url(r'^programs/list/$', ProgramList.as_view(), name='programs'),
-    url(r'^program/(?P<pk>\d+)$', ProgramDetail.as_view(), name='program'),
-    url(r'^programs/speakers/$', SpeakerList.as_view(), name='speakers'),
-    url(r'^programs/speaker/(?P<slug>\w+)$', SpeakerDetail.as_view(), name='speaker'),
-    url(r'^programs/schedule/$', schedule, name='schedule'),
-    url(r'^programs/jobfair/$', JobfairList.as_view(), name='jobfair'),
+
+    url(r'^room/(?P<pk>\d+)$',
+        RoomDetail.as_view(), name='room'),
+    url(r'^about/announcements/$',
+        AnnouncementList.as_view(), name='announcements'),
+    url(r'^about/announcement/(?P<pk>\d+)$',
+        AnnouncementDetail.as_view(), name='announcement'),
+    url(r'^about/sponsors/$',
+        SponsorList.as_view(), name='sponsors'),
+    url(r'^about/sponsor/(?P<slug>\w+)$',
+        SponsorDetail.as_view(), name='sponsor'),
+    url(r'^programs/list/$',
+        ProgramList.as_view(), name='programs'),
+    url(r'^program/(?P<pk>\d+)$',
+        ProgramDetail.as_view(), name='program'),
+    url(r'^programs/speakers/$',
+        SpeakerList.as_view(), name='speakers'),
+    url(r'^programs/speaker/(?P<slug>\w+)$',
+        SpeakerDetail.as_view(), name='speaker'),
+    url(r'^programs/schedule/$',
+        schedule, name='schedule'),
+    url(r'^programs/jobfair/$',
+        JobfairList.as_view(), name='jobfair'),
+
+    url(r'^login/$', login, name='login'),
+    url(r'^login/req/(?P<token>[a-z0-9\-]+)$', login_req, name='login_req'),
+    url(r'^login/mailsent/$', login_mailsent, name='login_mailsent'),
+    url(r'^logout/$', logout, name='logout'),
 
     url(r'^lang/(?P<lang_code>.*)/$', setlang, name='setlang'),
     url(r'^robots.txt$', robots, name='robots'),
