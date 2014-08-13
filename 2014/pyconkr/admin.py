@@ -56,7 +56,7 @@ admin.site.register(Speaker, SpeakerAdmin)
 
 
 class ProgramAdmin(SummernoteModelAdmin):
-    list_display = ('id', 'name', 'date', 'room', 'category',)
+    list_display = ('id', 'name', 'date', 'room', 'get_speakers', 'category',)
     list_editable = ('name', 'category',)
     ordering = ('id',)
     filter_horizontal = ('times', )

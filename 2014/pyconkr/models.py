@@ -131,6 +131,10 @@ class Program(models.Model):
     def begin_time(self):
         return self.times.all()[0].begin.strftime("%H:%M")
 
+    def get_speakers(self):
+        return ', '.join([_.name for _ in self.speakers.all()])
+    get_speakers.short_description = u'Speakers'
+
     def get_times(self):
         times = self.times.all()
         return '%s - %s' % (times[0].begin.strftime("%H:%M"),

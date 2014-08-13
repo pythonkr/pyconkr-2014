@@ -5,25 +5,28 @@
 {% block og-desc %}{{ program.desc|striptags|safe }}{% endblock %}
 
 {% block titlebar %}
-{% include "titlebar.html" with title=object.name %}
+{% include "titlebar.html" with title=program.name %}
 {% endblock %}
 
 {% block content %}
 {% include "badge/all.html" %}
 <ul class="list-group">
   <li class="list-group-item">
-    <span class="glyphicon glyphicon-tag"></span> {{ object.category }}
+    <span class="glyphicon glyphicon-tag"></span> {{ program.category }}
   </li>
   <li class="list-group-item">
-    <span class="glyphicon glyphicon-time"></span> {{ object.date }} {{ object.get_times }}
+    <span class="glyphicon glyphicon-time"></span> {{ program.date }} {{ program.get_times }}
   </li>
-  {% if object.room %}
   <li class="list-group-item">
-    <span class="glyphicon glyphicon-map-marker"></span> {{ object.room }}
+    <span class="glyphicon glyphicon-volume-up"></span> {{ program.get_language_display }}
+  </li>
+  {% if program.room %}
+  <li class="list-group-item">
+    <span class="glyphicon glyphicon-map-marker"></span> {{ program.room }}
   </li>
   {% endif %}
   <li class="list-group-item">
-    {% for speaker in object.speakers.all %}
+    {% for speaker in program.speakers.all %}
     <div class="speaker-small">
     <a href="{{ speaker.get_absolute_url }}">
         {% if speaker.image %}
@@ -36,5 +39,5 @@
   </li>
 </ul>
 <h3>{% trans "Description" %}</h3>
-{{ object.desc|safe }}
+{{ program.desc|safe }}
 {% endblock %}

@@ -10,7 +10,7 @@
 </a>
 <ul>
   {% for program in obj.program_set.all %}
-  <li><a href="{{ program.get_absolute_url }}">{{ program.name }}</a><sup>{{ program.get_language_display }}</sup></li>
+  <li><a href="{{ program.get_absolute_url }}">{{ program.name }}</a></li>
   {% endfor %}
 </ul>
 {% endfor %}
