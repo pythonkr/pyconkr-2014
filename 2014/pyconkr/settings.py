@@ -47,6 +47,7 @@ INSTALLED_APPS = (
     'django_summernote',
     'rosetta',
     'south',
+    'crispy_forms',
 ) + (
     # local apps
     'pyconkr',
@@ -124,9 +125,32 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'pyconkr.context_processors.menu',
     'pyconkr.context_processors.sponsors',
+    'pyconkr.context_processors.profile',
 )
 
 DOMAIN = 'http://dev.pycon.kr/2014'
 
 EMAIL_LOGIN_TITLE = _("PyCon Korea 2014 one-time login token")
 EMAIL_SENDER = _("PyCon Korea") + "<foo@bar.com>"
+EMAIL_USE_TLS = True
+EMAIL_HOST = ''
+EMAIL_PORT = 587
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+SUMMERNOTE_CONFIG = {
+    'height': '400px',
+    'toolbar': [
+        ['style', ['style']],
+        ['style', ['bold', 'italic', 'underline', 'clear']],
+        ['para', ['ul', 'ol', 'height']],
+        ['insert', ['link']],
+        ['misc', ['codeview']],
+    ],
+    'inplacewidget_external_css': (
+    ),
+    'inplacewidget_external_js': (
+    ),
+}

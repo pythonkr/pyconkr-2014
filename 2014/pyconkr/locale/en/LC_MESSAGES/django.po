@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-13 12:08+0000\n"
-"PO-Revision-Date: 2014-08-13 12:13+0000\n"
+"POT-Creation-Date: 2014-08-13 16:04+0000\n"
+"PO-Revision-Date: 2014-08-13 16:13+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -86,27 +86,56 @@ msgstr "Venue"
 msgid "Contact"
 msgstr "Contact"
 
-#: settings.py:88
+#: forms.py:28
+msgid "Submit"
+msgstr "Submit"
+
+#: forms.py:37 templates/pyconkr/speaker_detail.html:17
+msgid "Profile"
+msgstr "Profile"
+
+#: forms.py:38
+msgid "Additional information"
+msgstr "Additional information"
+
+#: models.py:79
+msgid "help-text-for-speaker-info"
+msgstr ""
+"<p>Add your personal pages in JSON format.</p>\n"
+"<pre>\n"
+"# Example\n"
+"{\n"
+"  \"twitter\": \"https://twitter.com/ev\",\n"
+"  \"github\": \"https://github.com/defunkt\"\n"
+"}\n"
+"</pre>\n"
+"<p>Supported pages are listed in <a href=\"http://lipis.github.io/bootstrap-social/\" target=\"_blank\">http://lipis.github.io/bootstrap-social/</a></p>"
+
+#: settings.py:89 settings_local.py:89
 msgid "Korean"
 msgstr "Korean"
 
-#: settings.py:89
+#: settings.py:90 settings_local.py:90
 msgid "English"
 msgstr "English"
 
-#: settings.py:131
+#: settings.py:133 settings_local.py:133
 msgid "PyCon Korea 2014 one-time login token"
 msgstr "PyCon Korea 2014 one-time login token"
 
-#: settings.py:132 templates/mail/token_html.html:2
+#: settings.py:134 settings_local.py:134 templates/mail/token_html.html:2
 msgid "PyCon Korea"
 msgstr "Pycon Korea"
 
-#: views.py:141 templates/nav.html:53
+#: views.py:167 templates/login_notvalidtoken.html:7 templates/nav.html:64
 msgid "Login"
 msgstr "Login"
 
-#: views.py:168
+#: views.py:180
+msgid "Not valid token"
+msgstr "Not valid token"
+
+#: views.py:202
 msgid "Mail sent"
 msgstr "Mail sent"
 
@@ -156,7 +185,7 @@ msgstr ""
 msgid "Login token valid for only 1 hour."
 msgstr "Login token valid for only 1 hour."
 
-#: templates/login_mailsent.html:6
+#: templates/login_mailsent.html:6 templates/login_notvalidtoken.html:6
 msgid "If you lost token mail or be lated, please login again."
 msgstr "If you lost token mail or be lated, please login again."
 
@@ -164,15 +193,27 @@ msgstr "If you lost token mail or be lated, please login again."
 msgid "Back to home"
 msgstr "Back to home"
 
+#: templates/login_notvalidtoken.html:5
+msgid "Requested token is not found or invalid."
+msgstr "Requested token is not found or invalid."
+
 #: templates/nav.html:8
 msgid "Toggle navigation"
 msgstr "Toggle navigation"
 
-#: templates/nav.html:48
+#: templates/nav.html:49
+msgid "My Profile"
+msgstr "My Profile"
+
+#: templates/nav.html:50
+msgid "Edit Profile"
+msgstr "Edit Profile"
+
+#: templates/nav.html:59
 msgid "Logout"
 msgstr "Logout"
 
-#: templates/nav.html:58
+#: templates/nav.html:69
 msgid "Language"
 msgstr "Language"
 
@@ -200,13 +241,13 @@ msgstr "Back to list"
 msgid "Description"
 msgstr "Description"
 
-#: templates/pyconkr/speaker_detail.html:17
-msgid "Profile"
-msgstr "Profile"
-
 #: templates/pyconkr/speaker_detail.html:21
 msgid "Program"
 msgstr "Program"
+
+#: templates/pyconkr/speaker_detail.html:28
+msgid "Edit"
+msgstr "Edit"
 
 #~ msgid "PyCon Korea <foo@bar.com>"
 #~ msgstr "Pycon Korea 2014"

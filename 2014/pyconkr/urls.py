@@ -5,7 +5,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from .views import index, schedule, setlang, robots
 from .views import RoomDetail, JobfairList
 from .views import AnnouncementList, AnnouncementDetail
-from .views import SpeakerList, SpeakerDetail
+from .views import SpeakerList, SpeakerDetail, SpeakerUpdate
 from .views import SponsorList, SponsorDetail
 from .views import ProgramList, ProgramDetail
 from .views import login, login_req, login_mailsent, logout
@@ -35,6 +35,8 @@ urlpatterns = patterns(
         SpeakerList.as_view(), name='speakers'),
     url(r'^programs/speaker/(?P<slug>\w+)$',
         SpeakerDetail.as_view(), name='speaker'),
+    url(r'^programs/speaker/(?P<slug>\w+)/edit$',
+        SpeakerUpdate.as_view(), name='speaker_edit'),
     url(r'^programs/schedule/$',
         schedule, name='schedule'),
     url(r'^programs/jobfair/$',

@@ -2,7 +2,7 @@ from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from django.db.models import Count
 from collections import OrderedDict
-from .models import SponsorLevel
+from .models import SponsorLevel, Speaker
 
 
 def menu(request):
@@ -65,6 +65,21 @@ def menu(request):
         'menu': menu,
         'title': title,
         'domain': settings.DOMAIN,
+    }
+
+
+def profile(request):
+    speaker = None
+    programs = None
+
+    if request.user.is_authenticated():
+        speaker = Speaker.objects.filter(email=request.user.email).first()
+        if speaker:
+            programs = speaker.program_set.all()
+
+    return {
+        'my_speaker': speaker,
+        'my_programs': programs,
     }
 
 

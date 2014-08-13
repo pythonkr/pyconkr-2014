@@ -23,4 +23,8 @@
   <a href="{{ program.get_absolute_url }}">{{ program.name }}</a>
   {% endfor %}
 </div>
+{% if editable %}
+<hr>
+<a href="{% url "speaker_edit" speaker.slug %}" class="btn btn-large btn-primary">{% trans "Edit" %}</a>
+{% endif %}
 {% endblock %}

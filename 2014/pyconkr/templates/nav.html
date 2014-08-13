@@ -45,6 +45,19 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.username }} <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
+            {% if my_speaker %}
+            <li class="dropdown-header">{% trans "Profile" %}</li>
+            <li><a href="{{ my_speaker.get_absolute_url }}">{% trans "My Profile" %}</a></li>
+            <li><a href="{% url "speaker_edit" my_speaker.slug %}">{% trans "Edit Profile" %}</a></li>
+            <li class="divider"></li>
+            {% endif %}
+            {% if my_programs %}
+            <li class="dropdown-header">{% trans "Programs" %}</li>
+            {% for program in my_programs %}
+            <li><a href="{{ program.get_absolute_url }}">{{ program.name }}</a></li>
+            {% endfor %}
+            <li role="presentation" class="divider"></li>
+            {% endif %}
             <li><a href="{% url "logout" %}">{% trans "Logout" %}</a></li>
           </ul>
         </li>

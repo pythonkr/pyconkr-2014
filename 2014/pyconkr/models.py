@@ -1,8 +1,9 @@
 from django.conf import settings
 from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.core.urlresolvers import reverse
-from django.template.defaultfilters import date as _date
 from django.db import models
+from django.template.defaultfilters import date as _date
+from django.utils.translation import ugettext_lazy as _
 from jsonfield import JSONField
 from uuid import uuid4
 
@@ -71,10 +72,11 @@ class Sponsor(models.Model):
 class Speaker(models.Model):
     slug = models.SlugField(max_length=100, db_index=True)
     name = models.CharField(max_length=100, db_index=True)
-    email = models.EmailField(max_length=255, null=True, blank=True)
+    email = models.EmailField(max_length=255, db_index=True,
+                              null=True, blank=True)
     image = models.ImageField(upload_to='speaker', null=True, blank=True)
     desc = models.TextField(null=True, blank=True)
-    info = JSONField()
+    info = JSONField(blank=True, help_text=_('help-text-for-speaker-info'))
 
     class Meta:
         ordering = ['name']
@@ -109,7 +111,7 @@ class Speaker(models.Model):
         return static('image/anonymous.png')
 
     def __unicode__(self):
-        return '%s (%s)' % (self.name, self.slug)
+        return '%s / %s' % (self.name, self.slug)
 
 
 class Program(models.Model):

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-13 12:08+0000\n"
-"PO-Revision-Date: 2014-08-13 12:10+0000\n"
+"POT-Creation-Date: 2014-08-13 16:04+0000\n"
+"PO-Revision-Date: 2014-08-13 16:15+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -87,27 +87,56 @@ msgstr "오시는 길"
 msgid "Contact"
 msgstr "연락처"
 
-#: settings.py:88
+#: forms.py:28
+msgid "Submit"
+msgstr "제출"
+
+#: forms.py:37 templates/pyconkr/speaker_detail.html:17
+msgid "Profile"
+msgstr "프로필"
+
+#: forms.py:38
+msgid "Additional information"
+msgstr "추가 정보"
+
+#: models.py:79
+msgid "help-text-for-speaker-info"
+msgstr ""
+"<p>개인 페이지들을 JSON 형식으로 추가해주세요.</p>\n"
+"<pre>\n"
+"# 예제\n"
+"{\n"
+"  \"twitter\": \"https://twitter.com/ev\",\n"
+"  \"github\": \"https://github.com/defunkt\"\n"
+"}\n"
+"</pre>\n"
+"<p>지원되는 페이지 목록은 <a href=\"http://lipis.github.io/bootstrap-social/\" target=\"_blank\">http://lipis.github.io/bootstrap-social/</a>에서 확인하실 수 있습니다.</p>"
+
+#: settings.py:89 settings_local.py:89
 msgid "Korean"
 msgstr "한국어"
 
-#: settings.py:89
+#: settings.py:90 settings_local.py:90
 msgid "English"
 msgstr "영어"
 
-#: settings.py:131
+#: settings.py:133 settings_local.py:133
 msgid "PyCon Korea 2014 one-time login token"
 msgstr "파이콘 한국 2014 일회용 로그인 토큰"
 
-#: settings.py:132 templates/mail/token_html.html:2
+#: settings.py:134 settings_local.py:134 templates/mail/token_html.html:2
 msgid "PyCon Korea"
 msgstr "파이콘 한국"
 
-#: views.py:141 templates/nav.html:53
+#: views.py:167 templates/login_notvalidtoken.html:7 templates/nav.html:64
 msgid "Login"
 msgstr "로그인"
 
-#: views.py:168
+#: views.py:180
+msgid "Not valid token"
+msgstr "유효한 토큰 아님"
+
+#: views.py:202
 msgid "Mail sent"
 msgstr "메일 발송 완료"
 
@@ -154,7 +183,7 @@ msgstr "일회용 로그인 토큰 주소가 메일로 발송되었습니다. �
 msgid "Login token valid for only 1 hour."
 msgstr "로그인 토큰은 1시간 동안만 유효합니다."
 
-#: templates/login_mailsent.html:6
+#: templates/login_mailsent.html:6 templates/login_notvalidtoken.html:6
 msgid "If you lost token mail or be lated, please login again."
 msgstr "토큰을 잃어버리셨거나, 늦었다면 다시 로그인 해주세요."
 
@@ -162,15 +191,27 @@ msgstr "토큰을 잃어버리셨거나, 늦었다면 다시 로그인 해주세
 msgid "Back to home"
 msgstr "첫 화면으로"
 
+#: templates/login_notvalidtoken.html:5
+msgid "Requested token is not found or invalid."
+msgstr "요청한 토큰이 없거나 유효하지 않습니다."
+
 #: templates/nav.html:8
 msgid "Toggle navigation"
 msgstr "툴바 토글"
 
-#: templates/nav.html:48
+#: templates/nav.html:49
+msgid "My Profile"
+msgstr "내 프로필"
+
+#: templates/nav.html:50
+msgid "Edit Profile"
+msgstr "프로필 수정"
+
+#: templates/nav.html:59
 msgid "Logout"
 msgstr "로그아웃"
 
-#: templates/nav.html:58
+#: templates/nav.html:69
 msgid "Language"
 msgstr "언어 / Language"
 
@@ -198,13 +239,13 @@ msgstr "목록으로"
 msgid "Description"
 msgstr "설명"
 
-#: templates/pyconkr/speaker_detail.html:17
-msgid "Profile"
-msgstr "프로필"
-
 #: templates/pyconkr/speaker_detail.html:21
 msgid "Program"
 msgstr "프로그램"
+
+#: templates/pyconkr/speaker_detail.html:28
+msgid "Edit"
+msgstr "수정"
 
 #~ msgid "PyCon Korea <foo@bar.com>"
 #~ msgstr "파이콘 한국 2014"

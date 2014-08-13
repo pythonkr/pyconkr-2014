@@ -9,9 +9,9 @@ from django.utils.http import is_safe_url
 from django.utils.translation import check_for_language
 from django.utils.translation import ugettext_lazy as _
 from django.views.decorators.cache import never_cache
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, UpdateView
 from datetime import datetime, timedelta
-from .forms import EmailLoginForm
+from .forms import EmailLoginForm, SpeakerForm
 from .helper import sendEmailToken
 from .models import (Room,
                      Program, ProgramDate, ProgramTime, ProgramCategory,
@@ -78,6 +78,30 @@ class SpeakerList(ListView):
 
 class SpeakerDetail(DetailView):
     model = Speaker
+
+    def get_context_data(self, **kwargs):
+        context = super(SpeakerDetail, self).get_context_data(**kwargs)
+
+        if self.request.user.is_authenticated():
+            if self.request.user.email == self.object.email:
+                context['editable'] = True
+
+        return context
+
+
+class SpeakerUpdate(UpdateView):
+    model = Speaker
+    form_class = SpeakerForm
+
+    def get_queryset(self):
+        queryset = super(SpeakerUpdate, self).get_queryset()
+        return queryset.filter(email=self.request.user.email)
+
+    def form_valid(self, form):
+        # Put data into jsonfield
+#        for k, v in self.model.descfields().iteritems():
+#            form.instance.desc[k] = self.request.POST.get(k)
+        return super(SpeakerUpdate, self).form_valid(form)
 
 
 class ProgramList(ListView):
