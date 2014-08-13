@@ -141,7 +141,6 @@ EMAIL_HOST_PASSWORD = ''
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 SUMMERNOTE_CONFIG = {
-    'height': '400px',
     'toolbar': [
         ['style', ['style']],
         ['style', ['bold', 'italic', 'underline', 'clear']],
