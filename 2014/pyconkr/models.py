@@ -1,5 +1,7 @@
+from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.template.defaultfilters import date as _date
+from django.utils.translation import ugettext_lazy as _
 from django.db import models
 from jsonfield import JSONField
 
@@ -108,6 +110,7 @@ class Program(models.Model):
     desc = models.TextField(null=True, blank=True)
     slide_url = models.CharField(max_length=255, null=True, blank=True)
     speakers = models.ManyToManyField(Speaker, blank=True)
+    language = models.CharField(max_length=2, choices=settings.LANGUAGES, default='ko')
 
     date = models.ForeignKey(ProgramDate)
     rooms = models.ManyToManyField(Room, null=True, blank=True)
