@@ -430,12 +430,20 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     padding: 10px 0 20px;
 }
 
-.badges {
+.social-badges {
     display: inline-block;
-    overflow: visible;
+    overflow: hidden;
     height: 20px;
 }
 
-.badges span {
+.social-badges span {
     float: left;
+}
+
+.badges {
+    display: inline-block;
+}
+
+.badges .btn {
+    margin-bottom: 5px;
 }

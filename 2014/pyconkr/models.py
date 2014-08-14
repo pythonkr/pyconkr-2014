@@ -96,7 +96,7 @@ class Speaker(models.Model):
                 site, url,
                 fa_replacement.get(site, site), site.capitalize()
             ))
-        return ' '.join(result)
+        return '<div class="badges">{}</div>'.format(' '.join(result))
 
     def get_badges_xs(self):
         return self.get_badges("btn-xs")
