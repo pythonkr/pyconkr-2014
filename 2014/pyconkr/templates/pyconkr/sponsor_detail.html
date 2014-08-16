@@ -1,14 +1,22 @@
 {% extends "base.html" %}
 
 {% block titlebar %}
-{% include "titlebar.html" with title=object.name %}
+{% include "titlebar.html" with title=sponsor.name %}
 {% endblock %}
 
 {% block content %}
 <div class="sponsor">
-  <img src="{{ object.image.url }}" alt="{{ object.name }}">
+  <img src="{{ sponsor.image.url }}" alt="{{ sponsor.name }}">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <span class="glyphicon glyphicon-tag"></span> {{ sponsor.level }}
+    </li>
+    <li class="list-group-item">
+      <span class="glyphicon glyphicon-share-alt"></span> {{ sponsor.url|urlize }}
+    </li>
+  </ul>
   <div>
-    {{ object.desc|safe }}
+    {{ sponsor.desc|safe }}
   </div>
 </div>
 {% endblock %}
