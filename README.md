@@ -20,6 +20,9 @@ Install
     $ python manage.py syncdb
     $ python manage.py migrate
     $ python manage.py loaddata pyconkr/fixtures/*
+    $ cd pyconkr
+    $ python ../manage.py compilemessages
+    $ cd ..
     $ python manage.py runserver 
 
 
