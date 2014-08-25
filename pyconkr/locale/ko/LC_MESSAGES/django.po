@@ -145,7 +145,7 @@ msgid "Pycon Korea 2014"
 msgstr "파이콘 한국 2014"
 
 #: templates/footer.html:7
-msgid "PyCon Korea 2014 is a production of the PyCon Korea Management Team"
+msgid "PyCon Korea 2014 is a production of the PyCon Korea Organizing Team"
 msgstr "파이콘 한국 2014는 파이콘 한국 준비위원회가 만들고 있습니다."
 
 #: templates/footer.html:10

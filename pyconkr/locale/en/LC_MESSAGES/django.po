@@ -144,8 +144,8 @@ msgid "Pycon Korea 2014"
 msgstr "Pycon Korea 2014"
 
 #: templates/footer.html:7
-msgid "PyCon Korea 2014 is a production of the PyCon Korea Management Team"
-msgstr "PyCon Korea 2014 is a production of the PyCon Korea Management Team"
+msgid "PyCon Korea 2014 is a production of the PyCon Korea Organizing Team"
+msgstr "PyCon Korea 2014 is a production of the PyCon Korea Organizing Team"
 
 #: templates/footer.html:10
 msgid "Powered by Django"

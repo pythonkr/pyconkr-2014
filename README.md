@@ -26,11 +26,11 @@ Install
 Author
 ------
 
-PyCon Korea Management Team
+PyCon Korea Organizing Team
 
 
 License
 -------
 
 The MIT License (MIT)
-Copyright (c) 2014 PyCon Korea Management Team
+Copyright (c) 2014 PyCon Korea Organizing Team
