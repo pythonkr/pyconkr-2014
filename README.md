@@ -18,6 +18,8 @@ Install
 
     $ pip install -r requirements.txt
     $ python manage.py syncdb
+    $ python manage.py migrate
+    $ python manage.py loaddata pyconkr/fixtures/*
     $ python manage.py runserver 
 
 
