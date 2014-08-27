@@ -79,7 +79,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 .content {
+    padding-top: 20px;
     padding-bottom: 100px;
+}
+
+.content h3:first-child {
+    margin-top: 0px;
 }
 
 .content img {
