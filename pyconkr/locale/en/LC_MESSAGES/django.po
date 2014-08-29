@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-13 16:04+0000\n"
-"PO-Revision-Date: 2014-08-13 16:13+0000\n"
+"POT-Creation-Date: 2014-08-29 17:21+0000\n"
+"PO-Revision-Date: 2014-08-29 17:22+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -46,7 +46,7 @@ msgstr "Sponsors"
 msgid "Staff"
 msgstr "Staff"
 
-#: context_processors.py:24
+#: context_processors.py:24 templates/nav.html:55
 msgid "Programs"
 msgstr "Programs"
 
@@ -86,17 +86,21 @@ msgstr "Venue"
 msgid "Contact"
 msgstr "Contact"
 
-#: forms.py:28
+#: forms.py:28 forms.py:46
 msgid "Submit"
 msgstr "Submit"
 
-#: forms.py:37 templates/pyconkr/speaker_detail.html:17
+#: forms.py:37 templates/nav.html:49 templates/pyconkr/speaker_detail.html:17
 msgid "Profile"
 msgstr "Profile"
 
 #: forms.py:38
 msgid "Additional information"
 msgstr "Additional information"
+
+#: forms.py:55 templates/pyconkr/program_detail.html:43
+msgid "Description"
+msgstr "Description"
 
 #: models.py:79
 msgid "help-text-for-speaker-info"
@@ -127,21 +131,25 @@ msgstr "PyCon Korea 2014 one-time login token"
 msgid "PyCon Korea"
 msgstr "Pycon Korea"
 
-#: views.py:167 templates/login_notvalidtoken.html:7 templates/nav.html:64
+#: views.py:180 templates/login_notvalidtoken.html:7 templates/nav.html:66
 msgid "Login"
 msgstr "Login"
 
-#: views.py:180
+#: views.py:193
 msgid "Not valid token"
 msgstr "Not valid token"
 
-#: views.py:202
+#: views.py:215
 msgid "Mail sent"
 msgstr "Mail sent"
 
 #: templates/base.html:7
 msgid "Pycon Korea 2014"
 msgstr "Pycon Korea 2014"
+
+#: templates/disqus.html:2
+msgid "Comments"
+msgstr "Comments"
 
 #: templates/footer.html:7
 msgid "PyCon Korea 2014 is a production of the PyCon Korea Organizing Team"
@@ -201,23 +209,23 @@ msgstr "Requested token is not found or invalid."
 msgid "Toggle navigation"
 msgstr "Toggle navigation"
 
-#: templates/nav.html:49
+#: templates/nav.html:50
 msgid "My Profile"
 msgstr "My Profile"
 
-#: templates/nav.html:50
+#: templates/nav.html:51
 msgid "Edit Profile"
 msgstr "Edit Profile"
 
-#: templates/nav.html:59
+#: templates/nav.html:61
 msgid "Logout"
 msgstr "Logout"
 
-#: templates/nav.html:69
+#: templates/nav.html:71
 msgid "Language"
 msgstr "Language"
 
-#: templates/schedule.html:6
+#: templates/schedule.html:7
 msgid "Schedule may be subject to change."
 msgstr "Schedule may be subject to change."
 
@@ -237,17 +245,14 @@ msgstr "Link"
 msgid "Back to list"
 msgstr "Back to list"
 
-#: templates/pyconkr/program_detail.html:43
-msgid "Description"
-msgstr "Description"
+#: templates/pyconkr/program_detail.html:47
+#: templates/pyconkr/speaker_detail.html:28
+msgid "Edit"
+msgstr "Edit"
 
 #: templates/pyconkr/speaker_detail.html:21
 msgid "Program"
 msgstr "Program"
-
-#: templates/pyconkr/speaker_detail.html:28
-msgid "Edit"
-msgstr "Edit"
 
 #~ msgid "PyCon Korea <foo@bar.com>"
 #~ msgstr "Pycon Korea 2014"

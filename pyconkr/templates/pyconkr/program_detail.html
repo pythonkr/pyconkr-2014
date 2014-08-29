@@ -46,4 +46,5 @@
 <hr>
 <a href="{% url "program_edit" program.id %}" class="btn btn-large btn-primary">{% trans "Edit" %}</a>
 {% endif %}
+{% include "disqus.html" %}
 {% endblock %}
