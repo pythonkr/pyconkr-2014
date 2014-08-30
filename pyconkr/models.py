@@ -118,6 +118,7 @@ class Program(models.Model):
     name = models.CharField(max_length=100, db_index=True)
     desc = models.TextField(null=True, blank=True)
     slide_url = models.CharField(max_length=255, null=True, blank=True)
+    video_url = models.CharField(max_length=255, null=True, blank=True)
     speakers = models.ManyToManyField(Speaker, blank=True)
     language = models.CharField(max_length=2,
                                 choices=settings.LANGUAGES,

@@ -47,10 +47,13 @@ class ProgramForm(forms.ModelForm):
 
     class Meta:
         model = Program
-        fields = ('desc', )
+        fields = ('slide_url', 'video_url', 'is_recordable', 'desc', )
         widgets = {
             'desc': SummernoteInplaceWidget(),
         }
         labels = {
+            'slide_url': _('Slide URL'),
+            'video_url': _('Video URL'),
+            'is_recordable': _('Photography and recording is allowed'),
             'desc': _('Description'),
         }
