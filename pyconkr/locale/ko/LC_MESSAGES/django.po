@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-29 17:21+0000\n"
-"PO-Revision-Date: 2014-08-29 17:21+0000\n"
+"POT-Creation-Date: 2014-08-30 01:22+0000\n"
+"PO-Revision-Date: 2014-08-30 01:22+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -99,7 +99,7 @@ msgstr "프로필"
 msgid "Additional information"
 msgstr "추가 정보"
 
-#: forms.py:55 templates/pyconkr/program_detail.html:43
+#: forms.py:55 templates/pyconkr/program_detail.html:50
 msgid "Description"
 msgstr "설명"
 
@@ -243,7 +243,15 @@ msgstr "링크"
 msgid "Back to list"
 msgstr "목록으로"
 
-#: templates/pyconkr/program_detail.html:47
+#: templates/pyconkr/program_detail.html:44
+msgid "Photography and recording is allowed"
+msgstr "촬영, 녹화 가능합니다."
+
+#: templates/pyconkr/program_detail.html:46
+msgid "Photography and recording is not allowed"
+msgstr "촬영, 녹화가 금지되어 있습니다."
+
+#: templates/pyconkr/program_detail.html:54
 #: templates/pyconkr/speaker_detail.html:28
 msgid "Edit"
 msgstr "수정"

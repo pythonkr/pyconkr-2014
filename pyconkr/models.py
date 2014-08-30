@@ -128,6 +128,8 @@ class Program(models.Model):
     times = models.ManyToManyField(ProgramTime)
     category = models.ForeignKey(ProgramCategory, null=True, blank=True)
 
+    is_recordable = models.BooleanField(default=True)
+
     def get_absolute_url(self):
         return reverse('program', args=[self.id])
 

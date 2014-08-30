@@ -59,7 +59,12 @@
           onclick="document.location='{{ s.get_absolute_url }}'">
           <div class="program">
             <a href="{{ s.get_absolute_url }}">
-              <div class="title">{{ s.name }}</div>
+              <div class="title">
+                {{ s.name }}
+                {% if not s.is_recordable %}
+                  &nbsp;<span class="glyphicon glyphicon-eye-close"></span>
+                {% endif %}
+              </div>
             </a>
           </div>
           {% if s.speakers %}

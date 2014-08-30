@@ -39,6 +39,13 @@
     {% endfor %}
   </li>
   {% endif %}
+  <li class="list-group-item">
+  {% if program.is_recordable %}
+    <span class="glyphicon glyphicon-eye-open"></span> {% trans "Photography and recording is allowed" %}
+  {% else %}
+    <span class="glyphicon glyphicon-eye-close"></span> {% trans "Photography and recording is not allowed" %}
+  {% endif %}
+  </li>
 </ul>
 <h3>{% trans "Description" %}</h3>
 {{ program.desc|safe }}
