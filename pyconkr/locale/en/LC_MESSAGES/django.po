@@ -100,7 +100,7 @@ msgstr "Additional information"
 
 #: forms.py:55
 msgid "Slide URL"
-msgstr "Presentation slide URL"
+msgstr "Presentation slides URL"
 
 #: forms.py:56
 msgid "Video URL"
@@ -263,7 +263,7 @@ msgstr "Photography and recording is not allowed"
 
 #: templates/pyconkr/program_detail.html:51
 msgid "Slide"
-msgstr "Presentation slide"
+msgstr "Presentation slides"
 
 #: templates/pyconkr/program_detail.html:55
 msgid "Video"
