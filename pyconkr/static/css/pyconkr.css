@@ -389,6 +389,10 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     border-radius: 100px;
 }
 
+.timetable td a {
+    display: block;
+}
+
 .jobfair dt img {
     width: auto;
     height: 64px;

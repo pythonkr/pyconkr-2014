@@ -55,8 +55,7 @@
         {% if s %}
         <td class="cell"
           colspan="{{ s.rooms.all|length }}"
-          rowspan="{{ s.times.all|length }}"
-          onclick="document.location='{{ s.get_absolute_url }}'">
+          rowspan="{{ s.times.all|length }}">
           <div class="program">
             <a href="{{ s.get_absolute_url }}">
               <div class="title">
