@@ -1,5 +1,7 @@
 {% extends "base.html" %}
+{% load i18n %}
 
+{% block title %}{{ block.super }} {% trans "Sponsor" %} | {{ sponsor.name }}{% endblock %}
 {% block titlebar %}
 {% include "titlebar.html" with title=sponsor.name %}
 {% endblock %}

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 
+{% block title %}{{ block.super }} {% trans "Program" %} | {{ program.name }}{% endblock %}
 {% block og-title %}{{ program.name }}{% endblock %}
 {% block og-desc %}{{ program.desc|striptags|safe }}{% endblock %}
 

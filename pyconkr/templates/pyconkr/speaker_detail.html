@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 
+{% block title %}{{ block.super }} {% trans "Speaker" %} | {{ speaker.name }}{% endblock %}
 {% block og-title %}{{ speaker.name }}{% endblock %}
 {% block og-image %}{{ speaker.get_image_url }}{% endblock %}
 {% block og-desc %}{{ speaker.desc|striptags }}{% endblock %}
