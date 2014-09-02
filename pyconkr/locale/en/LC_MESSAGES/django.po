@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-01 04:00+0000\n"
-"PO-Revision-Date: 2014-09-01 04:00+0000\n"
+"POT-Creation-Date: 2014-09-02 04:58+0000\n"
+"PO-Revision-Date: 2014-09-02 04:59+0000\n"
 "Last-Translator:   <jongman@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -240,6 +240,16 @@ msgstr "Language"
 #: templates/schedule.html:7
 msgid "Schedule may be subject to change."
 msgstr "Schedule may be subject to change."
+
+#: templates/schedule.html:23 templates/schedule.html.py:37
+#: templates/schedule.html:85 templates/pyconkr/program_list.html:16
+msgid "Slides link"
+msgstr "Slides"
+
+#: templates/schedule.html:26 templates/schedule.html.py:40
+#: templates/schedule.html:88 templates/pyconkr/program_list.html:19
+msgid "Video link"
+msgstr "Video"
 
 #: templates/sponsors.html:2
 msgid "Sponsor list"

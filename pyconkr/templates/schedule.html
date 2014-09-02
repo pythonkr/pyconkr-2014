@@ -17,13 +17,29 @@
         <th nowrap rowspan="{{ t_.items|length }}">{{ t.begin|date:"H:i" }}</th>
         {% for r, s in t_.items|slice:"1" %}
         <td nowrap>{{ s.room }}</td>
-        <td><a href="{{ s.get_absolute_url }}">{{ s }}</a></td>
+        <td>
+            <a href="{{ s.get_absolute_url }}">{{ s }}</a>
+            {% if s.slide_url %}
+            <small><a href="{{ s.slide_url }}"><span class="label label-primary">{% trans "Slides link" %}</span></a></small>
+            {% endif %}
+            {% if s.video_url %}
+            <small><a href="{{ s.video_url }}"><span class="label label-info">{% trans "Video link" %}</span></a></small>
+            {% endif %}
+        </td>
         {% endfor %}
       </tr>
       {% for r, s in t_.items|slice:"1:" %}
       <tr>
         <td nowrap>{{ s.room }}</td>
-        <td><a href="{{ s.get_absolute_url }}">{{ s }}</a></td>
+        <td>
+            <a href="{{ s.get_absolute_url }}">{{ s }}</a>
+            {% if s.slide_url %}
+            <small><a href="{{ s.slide_url }}"><span class="label label-primary">{% trans "Slides link" %}</span></a></small>
+            {% endif %}
+            {% if s.video_url %}
+            <small><a href="{{ s.video_url }}"><span class="label label-info">{% trans "Video link" %}</span></a></small>
+            {% endif %}
+        </td>
       </tr>
       {% endfor %}
       {% endfor %}
@@ -57,14 +73,20 @@
           colspan="{{ s.rooms.all|length }}"
           rowspan="{{ s.times.all|length }}">
           <div class="program">
-            <a href="{{ s.get_absolute_url }}">
-              <div class="title">
+            <a href="{{ s.get_absolute_url }}" class="title">
+              <div>
                 {{ s.name }}
                 {% if not s.is_recordable %}
                   &nbsp;<span class="glyphicon glyphicon-eye-close"></span>
                 {% endif %}
               </div>
             </a>
+            {% if s.slide_url %}
+            <small><a href="{{ s.slide_url }}"><span class="label label-primary">{% trans "Slides link" %}</span></a></small>
+            {% endif %}
+            {% if s.video_url %}
+            <small><a href="{{ s.video_url }}"><span class="label label-info">{% trans "Video link" %}</span></a></small>
+            {% endif %}
           </div>
           {% if s.speakers %}
           <div class="speaker">
