@@ -25,6 +25,9 @@
             {% if s.video_url %}
             <small><a href="{{ s.video_url }}"><span class="label label-info">{% trans "Video link" %}</span></a></small>
             {% endif %}
+            {% if s.pdf_url %}
+            <small><a href="{{ s.pdf_url }}"><span class="label label-danger">{% trans "PDF link" %}</span></a></small>
+            {% endif %}
         </td>
         {% endfor %}
       </tr>
@@ -38,6 +41,9 @@
             {% endif %}
             {% if s.video_url %}
             <small><a href="{{ s.video_url }}"><span class="label label-info">{% trans "Video link" %}</span></a></small>
+            {% endif %}
+            {% if s.pdf_url %}
+            <small><a href="{{ s.pdf_url }}"><span class="label label-danger">{% trans "PDF link" %}</span></a></small>
             {% endif %}
         </td>
       </tr>
@@ -86,6 +92,9 @@
             {% endif %}
             {% if s.video_url %}
             <small><a href="{{ s.video_url }}"><span class="label label-info">{% trans "Video link" %}</span></a></small>
+            {% endif %}
+            {% if s.pdf_url %}
+            <small><a href="{{ s.pdf_url }}"><span class="label label-danger">{% trans "PDF link" %}</span></a></small>
             {% endif %}
           </div>
           {% if s.speakers %}

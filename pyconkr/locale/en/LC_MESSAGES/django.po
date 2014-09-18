@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-02 04:58+0000\n"
-"PO-Revision-Date: 2014-09-02 04:59+0000\n"
-"Last-Translator:   <jongman@gmail.com>\n"
+"POT-Creation-Date: 2014-09-18 07:58+0000\n"
+"PO-Revision-Date: 2014-09-18 07:58+0000\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -110,7 +110,7 @@ msgstr "Presentation video URL"
 msgid "Photography and recording is allowed"
 msgstr "Photography and recording is allowed"
 
-#: forms.py:58 templates/pyconkr/program_detail.html:59
+#: forms.py:58 templates/pyconkr/program_detail.html:63
 msgid "Description"
 msgstr "Description"
 
@@ -127,19 +127,19 @@ msgstr ""
 "</pre>\n"
 "<p>Supported pages are listed in <a href=\"http://lipis.github.io/bootstrap-social/\" target=\"_blank\">http://lipis.github.io/bootstrap-social/</a></p>"
 
-#: settings.py:89 settings_local.py:89
+#: settings.py:89
 msgid "Korean"
 msgstr "Korean"
 
-#: settings.py:90 settings_local.py:90
+#: settings.py:90
 msgid "English"
 msgstr "English"
 
-#: settings.py:133 settings_local.py:133
+#: settings.py:133
 msgid "PyCon Korea 2014 one-time login token"
 msgstr "PyCon Korea 2014 one-time login token"
 
-#: settings.py:134 settings_local.py:134 templates/mail/token_html.html:2
+#: settings.py:134 templates/mail/token_html.html:2
 msgid "PyCon Korea"
 msgstr "Pycon Korea"
 
@@ -241,15 +241,20 @@ msgstr "Language"
 msgid "Schedule may be subject to change."
 msgstr "Schedule may be subject to change."
 
-#: templates/schedule.html:23 templates/schedule.html.py:37
-#: templates/schedule.html:85 templates/pyconkr/program_list.html:16
+#: templates/schedule.html:23 templates/schedule.html.py:40
+#: templates/schedule.html:91 templates/pyconkr/program_list.html:16
 msgid "Slides link"
 msgstr "Slides"
 
-#: templates/schedule.html:26 templates/schedule.html.py:40
-#: templates/schedule.html:88 templates/pyconkr/program_list.html:19
+#: templates/schedule.html:26 templates/schedule.html.py:43
+#: templates/schedule.html:94 templates/pyconkr/program_list.html:19
 msgid "Video link"
 msgstr "Video"
+
+#: templates/schedule.html:29 templates/schedule.html.py:46
+#: templates/schedule.html:97 templates/pyconkr/program_list.html:22
+msgid "PDF link"
+msgstr "PDF"
 
 #: templates/sponsors.html:2
 msgid "Sponsor list"
@@ -284,7 +289,11 @@ msgstr "Presentation slides"
 msgid "Video"
 msgstr "Presentation video"
 
-#: templates/pyconkr/program_detail.html:63
+#: templates/pyconkr/program_detail.html:60
+msgid "PDF"
+msgstr "PDF"
+
+#: templates/pyconkr/program_detail.html:67
 #: templates/pyconkr/speaker_detail.html:29
 msgid "Edit"
 msgstr "Edit"

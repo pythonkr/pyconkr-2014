@@ -18,6 +18,9 @@
     {% if program.video_url %}
     <small><a href="{{ program.video_url }}"><span class="label label-info">{% trans "Video link" %}</span></a></small>
     {% endif %}
+    {% if program.pdf_url %}
+    <small><a href="{{ program.pdf_url }}"><span class="label label-danger">{% trans "PDF link" %}</span></a></small>
+    {% endif %}
   </li>
   {% endfor %}
 </ul>

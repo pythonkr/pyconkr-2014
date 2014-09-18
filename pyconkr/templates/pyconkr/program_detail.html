@@ -56,6 +56,10 @@
 <h3>{% trans "Video" %}</h3>
 {{ program.video_url|urlize }}
 {% endif %}
+{% if program.pdf_url %}
+<h3>{% trans "PDF" %}</h3>
+{{ program.pdf_url|urlize }}
+{% endif %}
 <h3>{% trans "Description" %}</h3>
 {{ program.desc|safe }}
 {% if editable %}
