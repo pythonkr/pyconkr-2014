@@ -26,14 +26,14 @@
           <ul class="dropdown-menu" role="menu">
           {% for sk, sv in v.dropdown.items %}
             <li class="{% if sv.active %}active{% endif %}">
-              <a href="/{{ k }}/{{ sk }}">{{ sv.title }}</a>
+              <a href="{{ domain }}/{{ k }}/{{ sk }}">{{ sv.title }}</a>
             </li>
           {% endfor %}
           </ul>
         </li>
         {% else %}
         <li class="{% if v.active %}active{% endif %}">
-          <a href="/{{ k }}"><span class="glyphicon glyphicon-{{ v.icon }}"></span> {{ v.title }}</a>
+          <a href="{{ domain }}/{{ k }}"><span class="glyphicon glyphicon-{{ v.icon }}"></span> {{ v.title }}</a>
         </li>
         {% endif %}
         {% endfor %}
